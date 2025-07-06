@@ -45,6 +45,10 @@ texture = ExtResource("1_ig7tw")
 position = Vector2(0, 10)
 shape = SubResource("CapsuleShape2D_0xm2m")
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAABACYAAQAAAAAAAAAFACYAAQAAAAAAABAJACYAAQAAAAAAAAANACQAAQAAAAAAAAARACIAAQAAAAAAAAAVACAAAQAAAAAAAAAZAB0AAQAAAAAAAAAdABsAAQAAAAAAAAAhAB0AAQAAAAAAACAlAB8AAQAAAAAAACApACEAAQAAAAAAABAtAB4AAQAAAAAAABAxABsAAQAAAAAAABA1ABkAAQAAAAAAADA5ABcAAQAAAAAAADA9ABUAAQAAAAAAADBBABMAAQAAAAAAACBFABAAAQAAAAAAACBJABMAAQAAAAAAACA=")
 tile_set = SubResource("TileSet_7mycd")
