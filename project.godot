@@ -45,7 +45,7 @@ move_right={
 
 [physics]
 
-2d/default_gravity=1500.0
+2d/default_gravity=4500.0
 
 [rendering]
 
