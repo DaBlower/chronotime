@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccndup45bwhh1"]
+
+[ext_resource type="Script" uid="uid://2lpi5p3om2bj" path="res://scripts/movement.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://b5w5gctla0icn" path="res://pfp_64.png" id="2_qhqgy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dqkch"]
+radius = 30.0
+height = 60.0
+
+[node name="Player" type="Node"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_g2els")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(0, 7)
+texture = ExtResource("2_qhqgy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 9)
+shape = SubResource("CapsuleShape2D_dqkch")
+
+[node name="CoyoteTime" type="Timer" parent="CharacterBody2D"]
+process_callback = 0
+wait_time = 0.2
+one_shot = true
