@@ -5,7 +5,7 @@ extends CharacterBody2D
 
 const UP_DIRECTION := Vector2.UP # change this to allow walking on walls or the direction of gravity
 
-@export var speed := 600.0 # := means that the value and TYPE are equal
+@export var speed := 400.0 # := means that the value and TYPE are equal
 @export var jump_strength := 700.0 # how strong a jump is (the velocity added)
 @export var maximum_jumps := 2 # to allow for double jumping
 @export var double_jump_strength := 600.0 # a weaker jump strength for double jumps
