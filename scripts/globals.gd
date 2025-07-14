@@ -21,6 +21,6 @@ func add_artifact(time_period: String):
 
 func print_artifacts(time_period: String):
 	if artifacts_collected.has(time_period):
-		print(artifacts_collected.get(time_period))
+		print("%s: %d"%[str(time_period), int(artifacts_collected.get(time_period))])
 	else:
-		print("time period %s not found" %[str(time_period)])
+		print("time period%s not found" %[str(time_period)])
