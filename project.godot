@@ -15,6 +15,10 @@ run/main_scene="uid://b4665ewm4h5yo"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Globals="*res://scripts/globals.gd"
+
 [editor]
 
 movie_writer/movie_file="C:/Users/olive/OneDrive/Documents/GitHub/chronotime/movies/movement.avi"
