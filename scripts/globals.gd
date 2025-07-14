@@ -1,5 +1,7 @@
 extends Node
 
+const artifact_quota := 3 # there are 4 artifacts per time period
+
 var artifacts_collected := {
 	"prehistoric": 0,
 	"ancient_egypt": 0,
@@ -22,5 +24,20 @@ func add_artifact(time_period: String):
 func print_artifacts(time_period: String):
 	if artifacts_collected.has(time_period):
 		print("%s: %d"%[str(time_period), int(artifacts_collected.get(time_period))])
+		# debugging
+		if check_quotas(time_period):
+			print("true")
+		else:
+			print("false")
+		# end debugging
+	else:
+		print("time period%s not found" %[str(time_period)])
+
+func check_quotas(time_period: String):
+	if artifacts_collected.has(time_period):
+		if artifacts_collected.get(time_period) >= artifact_quota:
+			return true
+		else:
+			return false
 	else:
 		print("time period%s not found" %[str(time_period)])
