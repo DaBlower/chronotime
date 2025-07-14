@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4 uid="uid://bjssssmwcle5g"]
 
-[ext_resource type="PackedScene" uid="uid://ccndup45bwhh1" path="res://scenes/player.tscn" id="1_sli6m"]
-[ext_resource type="PackedScene" uid="uid://dx83dqdx78s8w" path="res://scenes/artifact.tscn" id="2_1ibmp"]
+[ext_resource type="PackedScene" uid="uid://ccndup45bwhh1" path="res://scenes/components/player.tscn" id="1_sli6m"]
+[ext_resource type="PackedScene" uid="uid://dx83dqdx78s8w" path="res://scenes/components/artifact.tscn" id="2_1ibmp"]
 [ext_resource type="Texture2D" uid="uid://di86exbj1bj4h" path="res://art/artifacts/obsidian-blade.png" id="3_77cf2"]
 [ext_resource type="Texture2D" uid="uid://ba32fu640pxov" path="res://art/dirt.png" id="4_dvhda"]
 
