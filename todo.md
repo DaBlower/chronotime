@@ -28,6 +28,46 @@
   - [ ] Checkpoint or resume system
   - [ ] Scene manager to switch levels
 ---
+
+## Sprite Sheet
+
+- [ ] Base Tile System
+  - [ ] Modular terrain blocks (stone, dirt, wall, grass)
+  - [ ] Decorative variants (cracks, moss, engravings)
+  - [ ] Foreground edges and platform trims
+
+- [ ] Background Assets
+  - [ ] Neutral props with stylized silhouettes (pillars, ruins, trees)
+  - [ ] Flat lighting for shader tinting
+  - [ ] Consistent pixel alignment
+
+- [ ] Lightable Surfaces
+  - [ ] Include objects with glow zones (e.g. glyphs, lamps, crystals)
+  - [ ] Separately shaded highlights for emissive targeting
+
+- [ ] Transparent Details
+  - [ ] Alpha layers for fog, vines, shadows
+  - [ ] Useful for overlays or distortion shaders
+
+- [ ] Palette Planning
+  - [ ] Midtone base colors across all tiles and props
+  - [ ] Avoid time-period-specific hues in the core sheet
+  - [ ] Build-in contrast zones for dynamic masking
+
+- [ ] Material Zone Tags
+  - [ ] Design areas to reflect implied material (stone vs. metal vs. fabric)
+  - [ ] Used for shader-specific effects (e.g. rust, scorch, decay)
+
+- [ ] Detail Layer Integration
+  - [ ] Add subtle pattern, symbol, or trim detail
+  - [ ] Supports unique shader accents like tech shimmer or magical corruption
+
+- [ ] Compatibility Pass
+  - [ ] Check that all elements respond cleanly to tint, warp, and emissive effects
+  - [ ] Finalize sprite sheet layout for reuse across time periods
+
+---
+
 ## Level Design (names tbd)
 
 - [ ] Shaders
