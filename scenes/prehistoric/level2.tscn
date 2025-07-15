@@ -1,3 +1,10 @@
 [gd_scene format=3 uid="uid://dnt5khxtru7bv"]
 
 [node name="Level2" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "this is level 2 :)"
+
+[node name="Camera2D" type="Camera2D" parent="Label"]
