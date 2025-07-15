@@ -1,6 +1,6 @@
 extends Node
 
-const artifact_quota := 3 # there are 4 artifacts per time period
+const artifact_quota := 3 # the amount of artifacts needed to move to the next level
 
 var artifacts_collected := {
 	"prehistoric": 0,
@@ -21,17 +21,31 @@ func add_artifact(time_period: String):
 	if artifacts_collected.has(time_period):
 		artifacts_collected[time_period] += 1
 
-func print_artifacts(time_period: String):
+func print_artifacts(time_period: String): # for debugging
 	if artifacts_collected.has(time_period):
-		print("%s: %d"%[str(time_period), int(artifacts_collected.get(time_period))])
+		print("DEBUG: %s: %d"%[str(time_period), int(artifacts_collected.get(time_period))])
 		# debugging
 		if check_quotas(time_period):
-			print("true")
+			print("DEBUG: check_quotas() is true")
 		else:
-			print("false")
+			print("DEBUG: check_quotas() is false")
 		# end debugging
+		print("\n")
 	else:
-		print("time period%s not found" %[str(time_period)])
+		print("ERROR: Time period%s doesn't exist! This happened in print_artifacts() in globals.gd" %[str(time_period)])
+
+func return_artifacts(time_period: String):
+	if artifacts_collected.has(time_period):
+		return artifacts_collected.get(time_period)
+	else:
+		print("ERROR: Time period doesn't exist! This happened in return_artifacts() in globals.gd")
+		return 0
+
+func set_artifacts(time_period: String, count: int):
+	if artifacts_collected.has(time_period):
+		artifacts_collected[time_period] = count
+	else:
+		print("ERROR: Time period%s doesn't exist! This happened in set_artifacts() in globals.gd" %[str(time_period)])
 
 func check_quotas(time_period: String):
 	if artifacts_collected.has(time_period):
@@ -40,4 +54,4 @@ func check_quotas(time_period: String):
 		else:
 			return false
 	else:
-		print("time period%s not found" %[str(time_period)])
+		print("ERROR: Time period%s doesn't exist! This happened in check_quotas() in globals.gd" %[str(time_period)])

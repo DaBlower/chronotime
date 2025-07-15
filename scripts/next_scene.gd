@@ -10,6 +10,6 @@ func _on_body_entered(body: Node2D) -> void:
 		if Globals.check_quotas(timePeriod):
 			get_tree().change_scene_to_packed(nextScene)
 		else:
-			print("Not enough artifacts!")
+			print("DEBUG: Not enough artifacts! (next_scene.gd)")
 	else:
 		get_tree().change_scene_to_packed(nextScene)

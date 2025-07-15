@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://dl6ayn4mnulq3"]
+
+[ext_resource type="Script" uid="uid://canlgsmj84ci8" path="res://scripts/artifact_bar.gd" id="1_tmhbf"]
+
+[node name="ArtifactBar" type="CanvasLayer"]
+script = ExtResource("1_tmhbf")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ArtifactSlot1" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="ArtifactSlot2" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="ArtifactSlot3" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2

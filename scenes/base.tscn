@@ -1,14 +1,14 @@
-[gd_scene load_steps=12 format=4 uid="uid://bjssssmwcle5g"]
+[gd_scene load_steps=12 format=4 uid="uid://va42j7svscpr"]
 
-[ext_resource type="Script" uid="uid://0mw5ysritqcf" path="res://scenes/components/levelLoad.gd" id="1_62afb"]
-[ext_resource type="PackedScene" uid="uid://ccndup45bwhh1" path="res://scenes/components/player.tscn" id="1_sli6m"]
-[ext_resource type="PackedScene" uid="uid://dx83dqdx78s8w" path="res://scenes/components/artifact.tscn" id="2_1ibmp"]
-[ext_resource type="TileSet" uid="uid://u32s41jlwxrg" path="res://scenes/prehistoric/tileset.tres" id="2_77cf2"]
-[ext_resource type="Texture2D" uid="uid://di86exbj1bj4h" path="res://art/artifacts/obsidian-blade.png" id="3_77cf2"]
-[ext_resource type="PackedScene" uid="uid://twhjf1ocdtsn" path="res://scenes/components/next_scene.tscn" id="5_77cf2"]
-[ext_resource type="PackedScene" uid="uid://dnt5khxtru7bv" path="res://scenes/prehistoric/level2.tscn" id="6_dvhda"]
-[ext_resource type="PackedScene" uid="uid://c3fpvxjt32ppa" path="res://scenes/components/killzone.tscn" id="7_dvhda"]
-[ext_resource type="PackedScene" uid="uid://dl6ayn4mnulq3" path="res://scenes/components/artifactBar.tscn" id="8_53g0f"]
+[ext_resource type="Script" uid="uid://0mw5ysritqcf" path="res://scenes/components/levelLoad.gd" id="1_conm7"]
+[ext_resource type="PackedScene" uid="uid://ccndup45bwhh1" path="res://scenes/components/player.tscn" id="2_d3jkd"]
+[ext_resource type="TileSet" uid="uid://u32s41jlwxrg" path="res://scenes/prehistoric/tileset.tres" id="3_u3awl"]
+[ext_resource type="PackedScene" uid="uid://dx83dqdx78s8w" path="res://scenes/components/artifact.tscn" id="4_2ku1j"]
+[ext_resource type="Texture2D" uid="uid://di86exbj1bj4h" path="res://art/artifacts/obsidian-blade.png" id="5_f31uk"]
+[ext_resource type="PackedScene" uid="uid://twhjf1ocdtsn" path="res://scenes/components/next_scene.tscn" id="6_gnai3"]
+[ext_resource type="PackedScene" uid="uid://dnt5khxtru7bv" path="res://scenes/prehistoric/level2.tscn" id="7_i8kv5"]
+[ext_resource type="PackedScene" uid="uid://c3fpvxjt32ppa" path="res://scenes/components/killzone.tscn" id="8_dxn3v"]
+[ext_resource type="PackedScene" uid="uid://dl6ayn4mnulq3" path="res://scenes/components/artifactBar.tscn" id="9_14jow"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_53g0f"]
 size = Vector2(30, 30)
@@ -16,18 +16,19 @@ size = Vector2(30, 30)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_53g0f"]
 
 [node name="Level1" type="Node2D"]
-script = ExtResource("1_62afb")
-timePeriod = "prehistoric"
+position = Vector2(273, 53)
+script = ExtResource("1_conm7")
 
-[node name="Player" parent="." instance=ExtResource("1_sli6m")]
+[node name="Player" parent="." instance=ExtResource("2_d3jkd")]
+position = Vector2(-57, 28)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("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")
-tile_set = ExtResource("2_77cf2")
+tile_set = ExtResource("3_u3awl")
 
 [node name="artifacts" type="Node2D" parent="."]
 
-[node name="obsidianBlade2" parent="artifacts" instance=ExtResource("2_1ibmp")]
+[node name="obsidianBlade2" parent="artifacts" instance=ExtResource("4_2ku1j")]
 position = Vector2(296, -203)
 timePeriod = "prehistoric"
 
@@ -35,61 +36,17 @@ timePeriod = "prehistoric"
 shape = SubResource("RectangleShape2D_53g0f")
 
 [node name="Sprite2D" type="Sprite2D" parent="artifacts/obsidianBlade2"]
-texture = ExtResource("3_77cf2")
+texture = ExtResource("5_f31uk")
 
-[node name="obsidianBlade3" parent="artifacts" instance=ExtResource("2_1ibmp")]
-position = Vector2(-521, 39)
-timePeriod = "prehistoric"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/obsidianBlade3"]
-shape = SubResource("RectangleShape2D_53g0f")
-
-[node name="Sprite2D" type="Sprite2D" parent="artifacts/obsidianBlade3"]
-texture = ExtResource("3_77cf2")
-
-[node name="Label3" type="Label" parent="artifacts/obsidianBlade3"]
-offset_left = -84.0
-offset_top = -24.0
-offset_right = -23.0
-offset_bottom = -1.0
-text = "like this"
-
-[node name="obsidianBlade4" parent="artifacts" instance=ExtResource("2_1ibmp")]
-position = Vector2(296, -203)
-timePeriod = "prehistoric"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/obsidianBlade4"]
-position = Vector2(94, 227)
-shape = SubResource("RectangleShape2D_53g0f")
-
-[node name="Sprite2D" type="Sprite2D" parent="artifacts/obsidianBlade4"]
-position = Vector2(94, 227)
-texture = ExtResource("3_77cf2")
-
-[node name="Next Scene" parent="." instance=ExtResource("5_77cf2")]
+[node name="Next Scene" parent="." instance=ExtResource("6_gnai3")]
 position = Vector2(1, -62)
 timePeriod = "prehistoric"
-nextScene = ExtResource("6_dvhda")
-checkQuotas = true
+nextScene = ExtResource("7_i8kv5")
 
-[node name="Label" type="Label" parent="."]
-offset_left = -64.0
-offset_top = -211.0
-offset_right = 49.0
-offset_bottom = -188.0
-text = "this is level 1 :)"
-
-[node name="Label2" type="Label" parent="."]
-offset_left = -407.0
-offset_top = -75.0
-offset_right = -258.0
-offset_bottom = -52.0
-text = "collect the artifacts"
-
-[node name="Killzone" parent="." instance=ExtResource("7_dvhda")]
+[node name="Killzone" parent="." instance=ExtResource("8_dxn3v")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-position = Vector2(0, 214)
+position = Vector2(-4, 266)
 shape = SubResource("WorldBoundaryShape2D_53g0f")
 
-[node name="ArtifactBar" parent="." instance=ExtResource("8_53g0f")]
+[node name="ArtifactBar" parent="." instance=ExtResource("9_14jow")]

@@ -1,16 +1,20 @@
-[gd_scene load_steps=8 format=4 uid="uid://dnt5khxtru7bv"]
+[gd_scene load_steps=10 format=4 uid="uid://dnt5khxtru7bv"]
 
 [ext_resource type="TileSet" uid="uid://u32s41jlwxrg" path="res://scenes/prehistoric/tileset.tres" id="1_2qwf8"]
+[ext_resource type="Script" uid="uid://0mw5ysritqcf" path="res://scenes/components/levelLoad.gd" id="1_mmsii"]
 [ext_resource type="PackedScene" uid="uid://ccndup45bwhh1" path="res://scenes/components/player.tscn" id="2_hwi6n"]
 [ext_resource type="PackedScene" uid="uid://dx83dqdx78s8w" path="res://scenes/components/artifact.tscn" id="3_87j74"]
 [ext_resource type="Texture2D" uid="uid://di86exbj1bj4h" path="res://art/artifacts/obsidian-blade.png" id="4_p1cqr"]
 [ext_resource type="PackedScene" uid="uid://twhjf1ocdtsn" path="res://scenes/components/next_scene.tscn" id="5_mmsii"]
 [ext_resource type="PackedScene" uid="uid://cqed2rsyq0j07" path="res://scenes/ancient_egypt/level1.tscn" id="6_j1g1a"]
+[ext_resource type="PackedScene" uid="uid://dl6ayn4mnulq3" path="res://scenes/components/artifactBar.tscn" id="7_p1cqr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ynx1d"]
 size = Vector2(30, 30)
 
 [node name="Level2" type="Node2D"]
+script = ExtResource("1_mmsii")
+timePeriod = "prehistoric"
 
 [node name="Label" type="Label" parent="."]
 offset_left = 562.0
@@ -52,3 +56,5 @@ texture = ExtResource("4_p1cqr")
 timePeriod = "prehistoric"
 nextScene = ExtResource("6_j1g1a")
 checkQuotas = true
+
+[node name="ArtifactBar" parent="." instance=ExtResource("7_p1cqr")]
