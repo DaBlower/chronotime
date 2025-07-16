@@ -1,32 +1,30 @@
 [gd_scene load_steps=4 format=3 uid="uid://ccndup45bwhh1"]
 
-[ext_resource type="Script" uid="uid://2lpi5p3om2bj" path="res://scripts/movement.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://b5w5gctla0icn" path="res://pfp_64.png" id="2_qhqgy"]
+[ext_resource type="Script" uid="uid://c6wl8hd54lmct" path="res://scripts/player.gd" id="1_h3cwf"]
+[ext_resource type="Texture2D" uid="uid://b4cmt7gb4783p" path="res://art/player.png" id="2_h3cwf"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h3cwf"]
-radius = 30.0
-height = 60.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h3cwf"]
+size = Vector2(32, 32)
 
 [node name="character" type="CharacterBody2D"]
-script = ExtResource("1_g2els")
-speed = null
-jump_strength = null
-maximum_jumps = null
-double_jump_strength = null
+script = ExtResource("1_h3cwf")
 
 [node name="sprite" type="Sprite2D" parent="."]
-position = Vector2(0, 7)
-texture = ExtResource("2_qhqgy")
-
-[node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 9)
-shape = SubResource("CapsuleShape2D_h3cwf")
-
-[node name="coyoteTime" type="Timer" parent="."]
-process_callback = 0
-wait_time = 0.1
-one_shot = true
+texture = ExtResource("2_h3cwf")
 
 [node name="camera" type="Camera2D" parent="."]
 position = Vector2(29, 0)
 position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
+[node name="collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_h3cwf")
+
+[node name="dashTimer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="dashCooldown" type="Timer" parent="."]
+wait_time = 0.15
+
+[connection signal="timeout" from="dashTimer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="dashCooldown" to="." method="_on_dash_cooldown_timeout"]

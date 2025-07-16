@@ -24,16 +24,18 @@ metadata/__load_path__ = "res://scenes/prehistoric/level2.tscn"
 script = ExtResource("1_6hrqr")
 
 [node name="Player" parent="." instance=ExtResource("2_d3jkd")]
-position = Vector2(-135, -39)
+position = Vector2(-9, -5)
 
 [node name="Foreground" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAD1/wUAAAAAAAAAAAD3/wUAAAAAAAAAAAD5/wUAAAAAAAAAAAD7/wUAAAAAAAAAAAD9/wUAAAAAAAAAAAD//wUAAAAAAAAAAAABAAUAAAAAAAAAAAADAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAD3/wcAAAAAAAAAAAD5/wcAAAAAAAAAAAD7/wcAAAAAAAAAAAD9/wcAAAAAAAAAAAD//wcAAAAAAAAAAAABAAcAAAAAAAAAAAADAAcAAAAAAAAAAAA=")
+position = Vector2(111, -56)
+tile_map_data = PackedByteArray("AAD1/wUAAAAAAAAAAAD3/wUAAAAAAAAAAAD5/wUAAAAAAAAAAAD7/wUAAAAAAAAAAAD9/wUAAAAAAAAAAAD//wUAAAAAAAAAAAABAAUAAAAAAAAAAAADAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAD3/wcAAAAAAAAAAAD5/wcAAAAAAAAAAAD7/wcAAAAAAAAAAAD9/wcAAAAAAAAAAAD//wcAAAAAAAAAAAABAAcAAAAAAAAAAAADAAcAAAAAAAAAAAANAAIAAAAAAAAAAAAPAAIAAAAAAAAAAAAPAAQAAAAAAAAAAAARAAIAAAAAAAAAAAARAAQAAAAAAAAAAAATAAIAAAAAAAAAAAATAAQAAAAAAAAAAAAVAAIAAAAAAAAAAAAVAAQAAAAAAAAAAAAXAAIAAAAAAAAAAAAXAAQAAAAAAAAAAAAZAAIAAAAAAAAAAAAZAAQAAAAAAAAAAAAbAAIAAAAAAAAAAAAbAAQAAAAAAAAAAAAdAAIAAAAAAAAAAAA=")
 tile_set = ExtResource("2_l3elg")
 
 [node name="artifacts" type="Node2D" parent="."]
+position = Vector2(111, -56)
 
 [node name="obsidianBlade2" parent="artifacts" instance=ExtResource("4_2ku1j")]
-position = Vector2(296, -203)
+position = Vector2(251, -88)
 timePeriod = "prehistoric"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/obsidianBlade2"]
@@ -42,12 +44,33 @@ shape = SubResource("RectangleShape2D_53g0f")
 [node name="Sprite2D" type="Sprite2D" parent="artifacts/obsidianBlade2"]
 texture = ExtResource("5_f31uk")
 
+[node name="obsidianBlade3" parent="artifacts" instance=ExtResource("4_2ku1j")]
+position = Vector2(54, 56)
+timePeriod = "prehistoric"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/obsidianBlade3"]
+shape = SubResource("RectangleShape2D_53g0f")
+
+[node name="Sprite2D" type="Sprite2D" parent="artifacts/obsidianBlade3"]
+texture = ExtResource("5_f31uk")
+
+[node name="obsidianBlade4" parent="artifacts" instance=ExtResource("4_2ku1j")]
+position = Vector2(393, -23)
+timePeriod = "prehistoric"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/obsidianBlade4"]
+shape = SubResource("RectangleShape2D_53g0f")
+
+[node name="Sprite2D" type="Sprite2D" parent="artifacts/obsidianBlade4"]
+texture = ExtResource("5_f31uk")
+
 [node name="Next Scene" parent="." instance=ExtResource("6_gnai3")]
-position = Vector2(-53, -176)
+position = Vector2(-169, -386)
 timePeriod = "prehistoric"
 nextScene = SubResource("Resource_l3elg")
 
 [node name="Killzone" parent="." instance=ExtResource("8_dxn3v")]
+position = Vector2(111, -56)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(-4, 266)
@@ -58,5 +81,5 @@ shape = SubResource("WorldBoundaryShape2D_53g0f")
 [node name="HealthBar" parent="." instance=ExtResource("10_jn13j")]
 
 [node name="DialogueTrigger" parent="." instance=ExtResource("11_6hrqr")]
-position = Vector2(36, 14)
+position = Vector2(147, -42)
 timeline = ExtResource("12_wetln")

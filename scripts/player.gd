@@ -13,7 +13,7 @@ var reset = false # on death
 
 var jumps = 2 # the jumps left (used for double jumps)
 
-var dir = 0 # declaring early bc dashing breaks
+var dir = 1 # declaring early bc dashing breaks
 
 var dashing = false
 var canDash = true
@@ -21,11 +21,10 @@ var canDash = true
 var onground = true
 
 func _ready() -> void:
-	Globals.respawn = Vector2(0,0)
+	Globals.respawn = self.position
 	
 func _physics_process(delta: float) -> void:
 	if is_on_floor() and not onground and slammed:
-		# $slam_land.play()
 		onground = true
 	elif is_on_floor() and not onground:
 		onground = true
@@ -51,8 +50,8 @@ func _physics_process(delta: float) -> void:
 		slammed = false
 	
 	if not slammed and not dashing:
-		$sprite.scale.x = lerp($sprite.scale.x, 1.25, 0.2)
-		$sprite.scale.y = lerp($sprite.scale.y, 1.1, 0.2)
+		$sprite.scale.x = lerp($sprite.scale.x, 1.0, 0.2)
+		$sprite.scale.y = lerp($sprite.scale.y, 1.0, 0.2)
 		
 	if Input.is_action_just_pressed("jump") and is_on_floor() and can_input:
 		velocity.y = JUMP_VELOCITY
@@ -85,15 +84,14 @@ func _physics_process(delta: float) -> void:
 		$sprite.scale.y = 0.8
 		
 	if Input.is_action_just_pressed("dash") and canDash and can_input:
-		$whoosh.play()
+		#$whoosh.play()
 		dashing = true
 		canDash = false
 		$dashTimer.start()
-		$dashCool.start()
-		$particles.process_material.direction = Vector3(dir*1,0,0)
-		$particles.emitting = true
-		await get_tree().create_timer(0.1).timeout
-		$particles.emitting = false
+		$dashCooldown.start()
+		#$particles.process_material.direction = Vector3(dir*1,0,0)
+		#$particles.emitting = true
+		#$particles.emitting = false
 	move_and_slide()
 	
 func kill(resetScene: bool):
@@ -107,7 +105,7 @@ func _on_dash_cooldown_timeout() -> void:
 	
 func _on_dash_timer_timeout() -> void:
 	dashing = false
-	$sprite.scale = Vector2(1.25,1.1)
+	$sprite.scale = Vector2(1.0,1.0)
 
 func stop_input(time):
 	can_input = false
