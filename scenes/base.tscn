@@ -17,7 +17,6 @@ size = Vector2(30, 30)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_53g0f"]
 
 [node name="Level1" type="Node2D"]
-position = Vector2(273, 53)
 script = ExtResource("1_conm7")
 
 [node name="Player" parent="." instance=ExtResource("2_d3jkd")]

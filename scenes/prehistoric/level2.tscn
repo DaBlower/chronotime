@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://dnt5khxtru7bv"]
+[gd_scene load_steps=11 format=4 uid="uid://dnt5khxtru7bv"]
 
 [ext_resource type="TileSet" uid="uid://u32s41jlwxrg" path="res://scenes/prehistoric/tileset.tres" id="1_2qwf8"]
 [ext_resource type="Script" uid="uid://0mw5ysritqcf" path="res://scenes/components/levelLoad.gd" id="1_mmsii"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://twhjf1ocdtsn" path="res://scenes/components/next_scene.tscn" id="5_mmsii"]
 [ext_resource type="PackedScene" uid="uid://cqed2rsyq0j07" path="res://scenes/ancient_egypt/level1.tscn" id="6_j1g1a"]
 [ext_resource type="PackedScene" uid="uid://dl6ayn4mnulq3" path="res://scenes/components/artifactBar.tscn" id="7_p1cqr"]
+[ext_resource type="PackedScene" uid="uid://d1h4rjbvfgpfi" path="res://scenes/components/healthBar.tscn" id="9_j1g1a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ynx1d"]
 size = Vector2(30, 30)
@@ -58,3 +59,5 @@ nextScene = ExtResource("6_j1g1a")
 checkQuotas = true
 
 [node name="ArtifactBar" parent="." instance=ExtResource("7_p1cqr")]
+
+[node name="HealthBar" parent="." instance=ExtResource("9_j1g1a")]
