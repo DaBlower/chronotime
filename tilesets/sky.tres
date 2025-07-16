@@ -1,0 +1,11 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cjpnq38yigypl"]
+
+[ext_resource type="Texture2D" uid="uid://b8bkch20p72fh" path="res://art/artifacts/sky.png" id="1_u8axr"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dmaw2"]
+texture = ExtResource("1_u8axr")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[resource]
+sources/1 = SubResource("TileSetAtlasSource_dmaw2")
