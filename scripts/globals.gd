@@ -1,6 +1,10 @@
 extends Node
 # this should be artifacts.gd but I didn't want to break anything
 
+var respawn = Vector2(0,0)
+var player_pos = Vector2(0,0)
+
+
 const artifact_quota := 3 # the amount of artifacts needed to move to the next level
 
 var artifacts_collected := {
@@ -56,3 +60,10 @@ func check_quotas(time_period: String):
 			return false
 	else:
 		print("ERROR: Time period%s doesn't exist! This happened in check_quotas() in globals.gd" %[str(time_period)])
+
+func set_player_pos(position: Vector2):
+	player_pos = position
+
+func getSpawn():
+	print(respawn)
+	return respawn

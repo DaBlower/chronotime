@@ -11,9 +11,4 @@ func  _ready() -> void:
 	artifact_bar.updateArtifacts(0)
 	health_bar.updateHealth()
 	Globals.set_artifacts(timePeriod, 0)
-	Dialogic.start(timePeriod)
 	
-
-	
-func _process(delta: float) -> void:
-	pass
