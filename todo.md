@@ -8,11 +8,13 @@
   - [x] Global tracking via Autoload singleton
   - [x] Per-level artifact counter
   - [ ] **UI feedback when collected**
-  - [ ] UI artifact tracker
+  - [x] UI artifact tracker
 
 - [ ] Health
-  - [ ] Implement killzone
+  - [x] Implement killzone
   - [ ] UI health bar
+  - [ ] End screen (load it in check_health() in health.gd)
+
 
 - [ ] Time Period Unlock System
   - [x] Condition check (3 artifacts per period for now) using Globals.gd

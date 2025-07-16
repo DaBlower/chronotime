@@ -1,4 +1,5 @@
 extends Node
+# this should be artifacts.gd but I didn't want to break anything
 
 const artifact_quota := 3 # the amount of artifacts needed to move to the next level
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://va42j7svscpr"]
+[gd_scene load_steps=13 format=4 uid="uid://va42j7svscpr"]
 
 [ext_resource type="Script" uid="uid://0mw5ysritqcf" path="res://scenes/components/levelLoad.gd" id="1_conm7"]
 [ext_resource type="PackedScene" uid="uid://ccndup45bwhh1" path="res://scenes/components/player.tscn" id="2_d3jkd"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dnt5khxtru7bv" path="res://scenes/prehistoric/level2.tscn" id="7_i8kv5"]
 [ext_resource type="PackedScene" uid="uid://c3fpvxjt32ppa" path="res://scenes/components/killzone.tscn" id="8_dxn3v"]
 [ext_resource type="PackedScene" uid="uid://dl6ayn4mnulq3" path="res://scenes/components/artifactBar.tscn" id="9_14jow"]
+[ext_resource type="PackedScene" uid="uid://d1h4rjbvfgpfi" path="res://scenes/components/healthBar.tscn" id="10_jn13j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_53g0f"]
 size = Vector2(30, 30)
@@ -50,3 +51,5 @@ position = Vector2(-4, 266)
 shape = SubResource("WorldBoundaryShape2D_53g0f")
 
 [node name="ArtifactBar" parent="." instance=ExtResource("9_14jow")]
+
+[node name="HealthBar" parent="." instance=ExtResource("10_jn13j")]

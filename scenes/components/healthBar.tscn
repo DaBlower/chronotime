@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1h4rjbvfgpfi"]
+
+[ext_resource type="Script" uid="uid://qd75ck04ewcc" path="res://scripts/health_bar.gd" id="1_t2mnh"]
+
+[node name="HealthBar" type="CanvasLayer"]
+script = ExtResource("1_t2mnh")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+alignment = 2
+
+[node name="HealthSlot1" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="HealthSlot2" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="HealthSlot3" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
