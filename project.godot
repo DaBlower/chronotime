@@ -54,6 +54,7 @@ text/autopauses={}
 
 [editor]
 
+movie_writer/mjpeg_quality=0.9
 movie_writer/movie_file="C:/Users/olive/OneDrive/Documents/GitHub/chronotime/movies/10hrs.avi"
 
 [editor_plugins]
