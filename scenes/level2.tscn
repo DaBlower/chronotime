@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://4whx7djhvdfm"]
+[gd_scene load_steps=13 format=4 uid="uid://4whx7djhvdfm"]
 
 [ext_resource type="Script" uid="uid://0mw5ysritqcf" path="res://scenes/components/levelLoad.gd" id="1_xa7n4"]
 [ext_resource type="TileSet" uid="uid://cgm8co3r8p7nn" path="res://tilesets/dirt.tres" id="2_xa7n4"]
@@ -8,12 +8,15 @@
 [ext_resource type="PackedScene" uid="uid://twhjf1ocdtsn" path="res://scenes/components/next_scene.tscn" id="6_ve5ok"]
 [ext_resource type="PackedScene" uid="uid://dl6ayn4mnulq3" path="res://scenes/components/artifactBar.tscn" id="8_wvb8j"]
 [ext_resource type="PackedScene" uid="uid://d1h4rjbvfgpfi" path="res://scenes/components/healthBar.tscn" id="9_g8vcy"]
+[ext_resource type="PackedScene" uid="uid://c3fpvxjt32ppa" path="res://scenes/components/killzone.tscn" id="9_xa7n4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ynx1d"]
 size = Vector2(30, 30)
 
 [sub_resource type="Resource" id="Resource_hrcei"]
 metadata/__load_path__ = "res://scenes/ancient_egypt/level1.tscn"
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bo4dx"]
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_xa7n4")
@@ -63,3 +66,9 @@ checkQuotas = true
 [node name="ArtifactBar" parent="." instance=ExtResource("8_wvb8j")]
 
 [node name="HealthBar" parent="." instance=ExtResource("9_g8vcy")]
+
+[node name="Killzone" parent="." instance=ExtResource("9_xa7n4")]
+position = Vector2(637, 926)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+shape = SubResource("WorldBoundaryShape2D_bo4dx")
