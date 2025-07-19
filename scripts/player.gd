@@ -22,6 +22,7 @@ var onground = true
 
 func _ready() -> void:
 	Globals.respawn = self.position
+	Engine.time_scale = 1.0
 	
 func _physics_process(delta: float) -> void:
 	if is_on_floor() and not onground and slammed:
@@ -66,11 +67,12 @@ func _physics_process(delta: float) -> void:
 		$sprite.scale.y = 0.7
 	
 	if Input.is_action_just_pressed("slam") and can_input:
-		slammed = true
-	if Input.is_action_just_pressed("slam") and is_on_floor() and can_input:
-		# give feedback when trying to slam on ground
-		$sprite.scale.x = 1.5
-		$sprite.scale.y = 0.8
+		if is_on_floor():
+			# give feedback when trying to slam on ground
+			$sprite.scale.x = 1.5
+			$sprite.scale.y = 0.8
+		else:
+			slammed = true
 	
 	if direction and can_input:
 		velocity.x = direction * SPEED
