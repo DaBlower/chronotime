@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://wo2edh4gcvph"]
+[gd_scene load_steps=18 format=4 uid="uid://wo2edh4gcvph"]
 
 [ext_resource type="Script" uid="uid://bpmcd3n2p3g8n" path="res://scripts/level.gd" id="1_6hrqr"]
 [ext_resource type="PackedScene" uid="uid://ccndup45bwhh1" path="res://scenes/components/player.tscn" id="2_d3jkd"]
@@ -12,6 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://d1h4rjbvfgpfi" path="res://scenes/components/healthBar.tscn" id="10_jn13j"]
 [ext_resource type="PackedScene" uid="uid://bjcefbt15ucx5" path="res://scenes/components/dialogueTrigger.tscn" id="11_6hrqr"]
 [ext_resource type="Resource" uid="uid://f4amcmwb6eqr" path="res://dialogue/prehistoric.dtl" id="12_wetln"]
+[ext_resource type="Texture2D" uid="uid://ch6mdx7y2ourn" path="res://art/backgrounds/layer0.png" id="13_ooohs"]
+[ext_resource type="Texture2D" uid="uid://b0lo3tt481b87" path="res://art/backgrounds/layer1.png" id="14_pnrra"]
+[ext_resource type="Texture2D" uid="uid://dqxu03ao0yfq8" path="res://art/backgrounds/fossils.png" id="15_pnrra"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_53g0f"]
 size = Vector2(30, 30)
@@ -23,15 +26,15 @@ script = ExtResource("1_6hrqr")
 timePeriod = "prehistoric"
 
 [node name="Player" parent="." instance=ExtResource("2_d3jkd")]
-position = Vector2(-9, -5)
+position = Vector2(300, 200)
 
 [node name="Foreground" type="TileMapLayer" parent="."]
-position = Vector2(111, -56)
-tile_map_data = PackedByteArray("AAD1/wUAAAAAAAAAAAD3/wUAAAAFAAAAAAD5/wUAAAAFAAAAAAD7/wUAAAAFAAAAAAD9/wUAAAAFAAAAAAD//wUAAAAFAAAAAAABAAUAAAAFAAAAAAADAAUAAAAFAAAAAAAFAAUAAAACAAAAAAD3/wcAAAAAAAQAAAD5/wcAAAAFAAIAAAD7/wcAAAAFAAIAAAD9/wcAAAAFAAIAAAD//wcAAAAFAAIAAAABAAcAAAAFAAIAAAADAAcAAAACAAQAAAANAAIAAAAAAAAAAAAPAAIAAAAFAAAAAAAPAAQAAAAAAAQAAAARAAIAAAAFAAAAAAARAAQAAAAFAAIAAAATAAIAAAAFAAAAAAATAAQAAAAFAAIAAAAVAAIAAAAFAAAAAAAVAAQAAAAFAAIAAAAXAAIAAAAFAAAAAAAXAAQAAAAFAAIAAAAZAAIAAAAFAAAAAAAZAAQAAAAFAAIAAAAbAAIAAAAFAAAAAAAbAAQAAAACAAQAAAAdAAIAAAACAAAAAAD4/wUAAAAFAAAAAAD6/wUAAAAFAAAAAAD8/wUAAAAFAAAAAAD+/wUAAAAFAAAAAAAAAAUAAAAFAAAAAAACAAUAAAAFAAAAAAAaAAIAAAAFAAAAAAAYAAIAAAAFAAAAAAAWAAIAAAAFAAAAAAA=")
+position = Vector2(300, 200)
+tile_map_data = PackedByteArray("AAD1/wUAAAAAAAAAAAD3/wUAAAAFAAAAAAD5/wUAAAAFAAAAAAD7/wUAAAAFAAAAAAD9/wUAAAAFAAAAAAD//wUAAAAFAAAAAAABAAUAAAAFAAAAAAADAAUAAAAFAAAAAAAFAAUAAAACAAAAAAD3/wcAAAAAAAQAAAD5/wcAAAAFAAIAAAD7/wcAAAAFAAIAAAD9/wcAAAAFAAIAAAD//wcAAAAFAAIAAAABAAcAAAAFAAIAAAADAAcAAAACAAQAAAANAAIAAAAAAAAAAAAPAAIAAAAFAAAAAAAPAAQAAAAAAAQAAAARAAIAAAAFAAAAAAARAAQAAAAFAAIAAAATAAIAAAAFAAAAAAATAAQAAAAFAAIAAAAVAAIAAAAFAAAAAAAVAAQAAAAFAAIAAAAXAAIAAAAFAAAAAAAXAAQAAAAFAAIAAAAZAAIAAAAFAAAAAAAZAAQAAAAFAAIAAAAbAAIAAAAFAAAAAAAbAAQAAAACAAQAAAAdAAIAAAACAAAAAAD4/wUAAAAFAAAAAAD6/wUAAAAFAAAAAAD8/wUAAAAFAAAAAAD+/wUAAAAFAAAAAAAAAAUAAAAFAAAAAAACAAUAAAAFAAAAAAAaAAIAAAAFAAAAAAAYAAIAAAAFAAAAAAAWAAIAAAAFAAAAAAArAP//AAAAAAQAAAAtAP//AAAFAAIAAAAvAP//AAAFAAIAAAAxAP//AAAFAAIAAAAzAP//AAAFAAIAAAA1AP//AAACAAQAAAApAP3/AAAJAAAAAAArAP3/AAAOAAAAAAAtAP3/AAAOAAAAAAAvAP3/AAAOAAAAAAAxAP3/AAAOAAAAAAAzAP3/AAAOAAAAAAA1AP3/AAAOAAAAAAA3AP3/AAALAAAAAAAmAAgAAAAJAAIAAAAoAAgAAAAOAAIAAAAqAAgAAAAOAAIAAAAsAAgAAAAOAAIAAAAuAAgAAAAOAAIAAAAwAAgAAAAOAAIAAAAyAAgAAAAOAAIAAAA0AAgAAAAOAAIAAAAoAAoAAAAAAAQAAAAqAAoAAAABAAQAAAAsAAoAAAABAAQAAAAuAAoAAAABAAQAAAAwAAoAAAABAAQAAAAyAAoAAAABAAQAAAA0AAoAAAACAAQAAAA2AAgAAAALAAIAAAA=")
 tile_set = ExtResource("3_6hrqr")
 
 [node name="artifacts" type="Node2D" parent="."]
-position = Vector2(111, -56)
+position = Vector2(300, 200)
 
 [node name="obsidianBlade2" parent="artifacts" instance=ExtResource("4_2ku1j")]
 position = Vector2(251, -88)
@@ -64,16 +67,16 @@ shape = SubResource("RectangleShape2D_53g0f")
 texture = ExtResource("5_f31uk")
 
 [node name="Next Scene" parent="." instance=ExtResource("6_gnai3")]
-position = Vector2(-48, 0)
+position = Vector2(300, 200)
 timePeriod = "prehistoric"
 nextScene = ExtResource("7_6hrqr")
 checkQuotas = true
 
 [node name="Killzone" parent="." instance=ExtResource("8_dxn3v")]
-position = Vector2(111, -56)
+position = Vector2(300, 200)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-position = Vector2(-4, 266)
+position = Vector2(300, 200)
 shape = SubResource("WorldBoundaryShape2D_53g0f")
 
 [node name="ArtifactBar" parent="." instance=ExtResource("9_14jow")]
@@ -81,5 +84,33 @@ shape = SubResource("WorldBoundaryShape2D_53g0f")
 [node name="HealthBar" parent="." instance=ExtResource("10_jn13j")]
 
 [node name="DialogueTrigger" parent="." instance=ExtResource("11_6hrqr")]
-position = Vector2(147, -42)
+position = Vector2(300, 200)
 timeline = ExtResource("12_wetln")
+
+[node name="Parallax" type="Node2D" parent="."]
+z_index = -2
+position = Vector2(0, -500)
+
+[node name="Dirt" type="Parallax2D" parent="Parallax"]
+repeat_size = Vector2(1280, 720)
+repeat_times = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/Dirt"]
+texture = ExtResource("13_ooohs")
+centered = false
+
+[node name="Bits" type="Parallax2D" parent="Parallax"]
+repeat_size = Vector2(1280, 720)
+repeat_times = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/Bits"]
+texture = ExtResource("14_pnrra")
+centered = false
+
+[node name="fossils" type="Parallax2D" parent="Parallax"]
+repeat_size = Vector2(1280, 720)
+repeat_times = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/fossils"]
+texture = ExtResource("15_pnrra")
+centered = false

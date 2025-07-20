@@ -51,6 +51,13 @@ save/encryption_on_exports_only=true
 timer/process_in_physics=true
 text/autoskip_time_per_event=1.0
 text/autopauses={}
+layout/style_list=[]
+layout/default_style="Default"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
 
 [editor]
 
@@ -112,5 +119,3 @@ dash={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
