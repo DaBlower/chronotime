@@ -12,6 +12,9 @@ const empty_slot = preload("res://art/hearts/emptyHeart.png")
 
 func updateHealth() -> void:
 	var health = Health.return_health()
-	for i in range(slots.size()):
-		slots[i].texture = filled_slot if i < health else empty_slot
-		
+	if health < 1:
+		pass
+	else:
+		for i in range(slots.size()):
+			slots[i].texture = filled_slot if i < health else empty_slot
+	

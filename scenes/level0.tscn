@@ -25,16 +25,39 @@ size = Vector2(30, 30)
 script = ExtResource("1_6hrqr")
 timePeriod = "prehistoric"
 
+[node name="Parallax" type="Node2D" parent="."]
+
+[node name="Dirt" type="Parallax2D" parent="Parallax"]
+repeat_size = Vector2(1920, 1080)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/Dirt"]
+texture = ExtResource("13_ooohs")
+centered = false
+
+[node name="Variations" type="Parallax2D" parent="Parallax"]
+repeat_size = Vector2(1920, 1080)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/Variations"]
+texture = ExtResource("14_pnrra")
+centered = false
+
+[node name="Fossils" type="Parallax2D" parent="Parallax"]
+repeat_size = Vector2(1920, 1080)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/Fossils"]
+texture = ExtResource("15_pnrra")
+centered = false
+
 [node name="Player" parent="." instance=ExtResource("2_d3jkd")]
-position = Vector2(300, 200)
+position = Vector2(1000, 800)
 
 [node name="Foreground" type="TileMapLayer" parent="."]
-position = Vector2(300, 200)
+position = Vector2(1000, 800)
 tile_map_data = PackedByteArray("AAD1/wUAAAAAAAAAAAD3/wUAAAAFAAAAAAD5/wUAAAAFAAAAAAD7/wUAAAAFAAAAAAD9/wUAAAAFAAAAAAD//wUAAAAFAAAAAAABAAUAAAAFAAAAAAADAAUAAAAFAAAAAAAFAAUAAAACAAAAAAD3/wcAAAAAAAQAAAD5/wcAAAAFAAIAAAD7/wcAAAAFAAIAAAD9/wcAAAAFAAIAAAD//wcAAAAFAAIAAAABAAcAAAAFAAIAAAADAAcAAAACAAQAAAANAAIAAAAAAAAAAAAPAAIAAAAFAAAAAAAPAAQAAAAAAAQAAAARAAIAAAAFAAAAAAARAAQAAAAFAAIAAAATAAIAAAAFAAAAAAATAAQAAAAFAAIAAAAVAAIAAAAFAAAAAAAVAAQAAAAFAAIAAAAXAAIAAAAFAAAAAAAXAAQAAAAFAAIAAAAZAAIAAAAFAAAAAAAZAAQAAAAFAAIAAAAbAAIAAAAFAAAAAAAbAAQAAAACAAQAAAAdAAIAAAACAAAAAAD4/wUAAAAFAAAAAAD6/wUAAAAFAAAAAAD8/wUAAAAFAAAAAAD+/wUAAAAFAAAAAAAAAAUAAAAFAAAAAAACAAUAAAAFAAAAAAAaAAIAAAAFAAAAAAAYAAIAAAAFAAAAAAAWAAIAAAAFAAAAAAArAP//AAAAAAQAAAAtAP//AAAFAAIAAAAvAP//AAAFAAIAAAAxAP//AAAFAAIAAAAzAP//AAAFAAIAAAA1AP//AAACAAQAAAApAP3/AAAJAAAAAAArAP3/AAAOAAAAAAAtAP3/AAAOAAAAAAAvAP3/AAAOAAAAAAAxAP3/AAAOAAAAAAAzAP3/AAAOAAAAAAA1AP3/AAAOAAAAAAA3AP3/AAALAAAAAAAmAAgAAAAJAAIAAAAoAAgAAAAOAAIAAAAqAAgAAAAOAAIAAAAsAAgAAAAOAAIAAAAuAAgAAAAOAAIAAAAwAAgAAAAOAAIAAAAyAAgAAAAOAAIAAAA0AAgAAAAOAAIAAAAoAAoAAAAAAAQAAAAqAAoAAAABAAQAAAAsAAoAAAABAAQAAAAuAAoAAAABAAQAAAAwAAoAAAABAAQAAAAyAAoAAAABAAQAAAA0AAoAAAACAAQAAAA2AAgAAAALAAIAAAA=")
 tile_set = ExtResource("3_6hrqr")
 
 [node name="artifacts" type="Node2D" parent="."]
-position = Vector2(300, 200)
+position = Vector2(1000, 800)
 
 [node name="obsidianBlade2" parent="artifacts" instance=ExtResource("4_2ku1j")]
 position = Vector2(251, -88)
@@ -67,16 +90,16 @@ shape = SubResource("RectangleShape2D_53g0f")
 texture = ExtResource("5_f31uk")
 
 [node name="Next Scene" parent="." instance=ExtResource("6_gnai3")]
-position = Vector2(300, 200)
+position = Vector2(1000, 800)
 timePeriod = "prehistoric"
 nextScene = ExtResource("7_6hrqr")
 checkQuotas = true
 
 [node name="Killzone" parent="." instance=ExtResource("8_dxn3v")]
-position = Vector2(300, 200)
+position = Vector2(1000, 800)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-position = Vector2(300, 200)
+position = Vector2(1000, 800)
 shape = SubResource("WorldBoundaryShape2D_53g0f")
 
 [node name="ArtifactBar" parent="." instance=ExtResource("9_14jow")]
@@ -84,33 +107,5 @@ shape = SubResource("WorldBoundaryShape2D_53g0f")
 [node name="HealthBar" parent="." instance=ExtResource("10_jn13j")]
 
 [node name="DialogueTrigger" parent="." instance=ExtResource("11_6hrqr")]
-position = Vector2(300, 200)
+position = Vector2(1000, 800)
 timeline = ExtResource("12_wetln")
-
-[node name="Parallax" type="Node2D" parent="."]
-z_index = -2
-position = Vector2(0, -500)
-
-[node name="Dirt" type="Parallax2D" parent="Parallax"]
-repeat_size = Vector2(1280, 720)
-repeat_times = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax/Dirt"]
-texture = ExtResource("13_ooohs")
-centered = false
-
-[node name="Bits" type="Parallax2D" parent="Parallax"]
-repeat_size = Vector2(1280, 720)
-repeat_times = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax/Bits"]
-texture = ExtResource("14_pnrra")
-centered = false
-
-[node name="fossils" type="Parallax2D" parent="Parallax"]
-repeat_size = Vector2(1280, 720)
-repeat_times = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax/fossils"]
-texture = ExtResource("15_pnrra")
-centered = false
