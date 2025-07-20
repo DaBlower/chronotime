@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Chronotime"
-run/main_scene="uid://b4665ewm4h5yo"
+run/main_scene="uid://wo2edh4gcvph"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

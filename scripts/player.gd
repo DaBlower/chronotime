@@ -20,8 +20,10 @@ var canDash = true
 
 var onground = true
 
+
 func _ready() -> void:
 	Globals.respawn = self.position
+	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Engine.time_scale = 1.0
 	
 func _physics_process(delta: float) -> void:
@@ -117,3 +119,8 @@ func stop_input(time):
 func teleport(coordinates: Vector2):
 	position = coordinates
 	
+func _on_dialogic_signal(argument: String):
+	if argument == "stop_input":
+		can_input = false
+	elif argument == "start_input":
+		can_input = true
