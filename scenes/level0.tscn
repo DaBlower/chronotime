@@ -27,6 +27,7 @@ timePeriod = "prehistoric"
 [node name="Parallax" type="Node2D" parent="."]
 
 [node name="Dirt" type="Parallax2D" parent="Parallax"]
+scroll_scale = Vector2(0.5, 0.5)
 repeat_size = Vector2(1920, 1080)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax/Dirt"]
@@ -34,6 +35,7 @@ texture = ExtResource("13_ooohs")
 centered = false
 
 [node name="Variations" type="Parallax2D" parent="Parallax"]
+scroll_scale = Vector2(0.7, 0.7)
 repeat_size = Vector2(1920, 1080)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax/Variations"]
@@ -41,6 +43,7 @@ texture = ExtResource("14_pnrra")
 centered = false
 
 [node name="Fossils" type="Parallax2D" parent="Parallax"]
+scroll_scale = Vector2(0.8, 0.8)
 repeat_size = Vector2(1920, 1080)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax/Fossils"]
