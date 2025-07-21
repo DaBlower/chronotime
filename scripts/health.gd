@@ -1,6 +1,8 @@
 extends Node
 
-@export var end_screen = preload("res://scenes/components/gameOver.tscn")
+signal hide_bars
+
+@export_file("*.tscn") var end_screen = "res://scenes/components/gameOver.tscn"
 
 var health = 3 # the starting amount of health
 
@@ -18,4 +20,5 @@ func return_health() -> int:
 func check_health():
 	if health < 1:
 		health = 3
-		get_tree().change_scene_to_packed(end_screen)
+		hide_bars.emit()
+		TransitionController.transition_to(end_screen)

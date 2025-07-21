@@ -10,18 +10,18 @@
   - [ ] **UI feedback when collected**
   - [x] UI artifact tracker
 
-- [ ] Health
+- [x] Health
   - [x] Implement killzone
-  - [ ] UI health bar
-  - [ ] End screen (load it in check_health() in health.gd)
+  - [x] UI health bar
+  - [x] End screen (load it in check_health() in health.gd)
 
 
 - [ ] Time Period Unlock System
   - [x] Condition check (3 artifacts per period for now) using Globals.gd
-    - Features functions to:
-      - Check if the amount of artifacts collected in a time period is enough to progress
-      - Print the amount of artifacts to the debug console
-      - Store the number of artifacts collected in a dictionary
+	- Features functions to:
+	  - Check if the amount of artifacts collected in a time period is enough to progress
+	  - Print the amount of artifacts to the debug console
+	  - Store the number of artifacts collected in a dictionary
   - [ ] Gate/portal/cloud sweep in transition
   - [ ] Visual effect on unlock
 
@@ -79,198 +79,198 @@
   - [ ] Connect shader logic to global time period variable
   - [ ] Add transition tween or animation (e.g. time-jump fade)
   - [ ] Design shader effects per time period
-    - [ ] Prehistoric – warm tones, moss overlay, flicker
-    - [ ] Ancient Egypt – sunbleached yellow, heat distortion
-    - [ ] Ancient Greece – pastel lighting, mythic glow
-    - [ ] Imperial China – red lantern bloom, ink ripple
-    - [ ] Medieval Europe – candle haze, cool shadows
-    - [ ] Renaissance – canvas texture, soft glows
-    - [ ] Industrial Revolution – smoke overlay, soot filter
-    - [ ] Prohibition – sepia tone, vinyl scratches
-    - [ ] World Wars – desaturated green, glitch pulses
-    - [ ] Modern Day – natural light, graffiti tint
-    - [ ] Near Future – neon edge glow, hologram shimmer
-    - [ ] Far Future – cosmic gradients, lens warp
+	- [ ] Prehistoric – warm tones, moss overlay, flicker
+	- [ ] Ancient Egypt – sunbleached yellow, heat distortion
+	- [ ] Ancient Greece – pastel lighting, mythic glow
+	- [ ] Imperial China – red lantern bloom, ink ripple
+	- [ ] Medieval Europe – candle haze, cool shadows
+	- [ ] Renaissance – canvas texture, soft glows
+	- [ ] Industrial Revolution – smoke overlay, soot filter
+	- [ ] Prohibition – sepia tone, vinyl scratches
+	- [ ] World Wars – desaturated green, glitch pulses
+	- [ ] Modern Day – natural light, graffiti tint
+	- [ ] Near Future – neon edge glow, hologram shimmer
+	- [ ] Far Future – cosmic gradients, lens warp
 
 - [ ] Prehistoric
   - [ ] Level 1 – Fossil Caverns
-    - [ ] Obsidian Blade
-      - [ ] Outline
-      - [ ] Color palette
-      - [ ] Animation (shine or pickup flash)
-    - [ ] Carved Totem
-      - [ ] Outline
-      - [ ] Color palette
-      - [ ] Animation (idle pulse or reveal effect)
-    - [ ] Art
-    - [ ] Layout
+	- [ ] Obsidian Blade
+	  - [ ] Outline
+	  - [ ] Color palette
+	  - [ ] Animation (shine or pickup flash)
+	- [ ] Carved Totem
+	  - [ ] Outline
+	  - [ ] Color palette
+	  - [ ] Animation (idle pulse or reveal effect)
+	- [ ] Art
+	- [ ] Layout
   - [ ] Level 2 – Volcano Ridge
-    - [ ] Mammoth Tooth
-      - [ ] Outline
-      - [ ] Color palette
-      - [ ] Animation
-    - [ ] Fire Stone Idol
-      - [ ] Outline
-      - [ ] Color palette
-      - [ ] Animation
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Mammoth Tooth
+	  - [ ] Outline
+	  - [ ] Color palette
+	  - [ ] Animation
+	- [ ] Fire Stone Idol
+	  - [ ] Outline
+	  - [ ] Color palette
+	  - [ ] Animation
+	- [ ] Create shader
+	- [ ] Layout
 
 - [ ] Ancient Egypt
   - [ ] Level 1 – Desert Pathways
-    - [ ] Ankh Pendant
-      - [ ] Outline
-      - [ ] Color palette (gold/blue)
-      - [ ] Animation (hover shimmer)
-    - [ ] Scarab Disk
-      - [ ] Outline
-      - [ ] Color palette
-      - [ ] Animation
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Ankh Pendant
+	  - [ ] Outline
+	  - [ ] Color palette (gold/blue)
+	  - [ ] Animation (hover shimmer)
+	- [ ] Scarab Disk
+	  - [ ] Outline
+	  - [ ] Color palette
+	  - [ ] Animation
+	- [ ] Create shader
+	- [ ] Layout
   - [ ] Level 2 – Temple of Ra
-    - [ ] Eye of Horus Tablet
-      - [ ] Outline
-      - [ ] Color palette
-      - [ ] Animation
-    - [ ] Scepter Fragment
-      - [ ] Outline
-      - [ ] Color palette
-      - [ ] Animation
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Eye of Horus Tablet
+	  - [ ] Outline
+	  - [ ] Color palette
+	  - [ ] Animation
+	- [ ] Scepter Fragment
+	  - [ ] Outline
+	  - [ ] Color palette
+	  - [ ] Animation
+	- [ ] Create shader
+	- [ ] Layout
 
 - [ ] Ancient Greece
   - [ ] Level 1 – Olive Hillside
-    - [ ] Laurel Medal
-      - [ ] Outline
-      - [ ] Color palette
-      - [ ] Animation
-    - [ ] Philosopher’s Fragment
-      - [ ] Outline
-      - [ ] Color palette
-      - [ ] Animation
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Laurel Medal
+	  - [ ] Outline
+	  - [ ] Color palette
+	  - [ ] Animation
+	- [ ] Philosopher’s Fragment
+	  - [ ] Outline
+	  - [ ] Color palette
+	  - [ ] Animation
+	- [ ] Create shader
+	- [ ] Layout
   - [ ] Level 2 – Labyrinth of Echoes
-    - [ ] Minotaur Horn
-      - [ ] Outline
-      - [ ] Color palette
-      - [ ] Animation
-    - [ ] Olympian Torch Head
-      - [ ] Outline
-      - [ ] Color palette
-      - [ ] Animation
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Minotaur Horn
+	  - [ ] Outline
+	  - [ ] Color palette
+	  - [ ] Animation
+	- [ ] Olympian Torch Head
+	  - [ ] Outline
+	  - [ ] Color palette
+	  - [ ] Animation
+	- [ ] Create shader
+	- [ ] Layout
 
 - [ ] Imperial China
   - [ ] Level 1 – Lotus Forest
-    - [ ] Jade Leaf Token
-    - [ ] Silk Ribbon Scroll
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Jade Leaf Token
+	- [ ] Silk Ribbon Scroll
+	- [ ] Create shader
+	- [ ] Layout
   - [ ] Level 2 – Warlord’s Keep
-    - [ ] Dragon Seal Stone
-    - [ ] Porcelain Tile Shard
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Dragon Seal Stone
+	- [ ] Porcelain Tile Shard
+	- [ ] Create shader
+	- [ ] Layout
 
 - [ ] Medieval Europe
   - [ ] Level 1 – Castle Road
-    - [ ] Blacksmith’s Brand
-    - [ ] Goblet of Revelry
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Blacksmith’s Brand
+	- [ ] Goblet of Revelry
+	- [ ] Create shader
+	- [ ] Layout
   - [ ] Level 2 – Crypts Below
-    - [ ] Bone Rosary
-    - [ ] Holy Manuscript Page
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Bone Rosary
+	- [ ] Holy Manuscript Page
+	- [ ] Create shader
+	- [ ] Layout
 
 - [ ] Renaissance
   - [ ] Level 1 – Fresco Garden
-    - [ ] Create shaderist’s Brush
-    - [ ] Globe Fragment
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Create shaderist’s Brush
+	- [ ] Globe Fragment
+	- [ ] Create shader
+	- [ ] Layout
   - [ ] Level 2 – Maestro’s Chamber
-    - [ ] Music Scroll
-    - [ ] Starry Lens
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Music Scroll
+	- [ ] Starry Lens
+	- [ ] Create shader
+	- [ ] Layout
 
 - [ ] Industrial Revolution
   - [ ] Level 1 – Iron Alleyways
-    - [ ] Gear Core
-    - [ ] Factory Badge
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Gear Core
+	- [ ] Factory Badge
+	- [ ] Create shader
+	- [ ] Layout
   - [ ] Level 2 – Coalworks Facility
-    - [ ] Pressure Gauge
-    - [ ] Coal Prism
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Pressure Gauge
+	- [ ] Coal Prism
+	- [ ] Create shader
+	- [ ] Layout
 
 - [ ] Prohibition
   - [ ] Level 1 – City Rooftops
-    - [ ] Flapper Comb
-    - [ ] Jazz Vinyl
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Flapper Comb
+	- [ ] Jazz Vinyl
+	- [ ] Create shader
+	- [ ] Layout
   - [ ] Level 2 – Speakeasy Basement
-    - [ ] Hidden Flask
-    - [ ] Club Pass Token
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Hidden Flask
+	- [ ] Club Pass Token
+	- [ ] Create shader
+	- [ ] Layout
 
 - [ ] World Wars
   - [ ] Level 1 – Trenches Divide
-    - [ ] Dog Tag
-    - [ ] Field Radio Cap
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Dog Tag
+	- [ ] Field Radio Cap
+	- [ ] Create shader
+	- [ ] Layout
   - [ ] Level 2 – Bunker Horizon
-    - [ ] Medal of Resolve
-    - [ ] Cipher Fragment
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Medal of Resolve
+	- [ ] Cipher Fragment
+	- [ ] Create shader
+	- [ ] Layout
 
 - [ ] Modern Day
   - [ ] Level 1 – City Parks
-    - [ ] Skateboard Wheel
-    - [ ] VHS Tape
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Skateboard Wheel
+	- [ ] VHS Tape
+	- [ ] Create shader
+	- [ ] Layout
   - [ ] Level 2 – Suburban Rooms
-    - [ ] Flip Phone
-    - [ ] Graffiti Tag Slab
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Flip Phone
+	- [ ] Graffiti Tag Slab
+	- [ ] Create shader
+	- [ ] Layout
 
 - [ ] Near Future
   - [ ] Level 1 – Neon Metropolis
-    - [ ] Quantum Coin
-    - [ ] Augmented Eyepiece
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Quantum Coin
+	- [ ] Augmented Eyepiece
+	- [ ] Create shader
+	- [ ] Layout
   - [ ] Level 2 – Sky Grid Arena
-    - [ ] Cyber Core Cube
-    - [ ] Gravity Chip
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Cyber Core Cube
+	- [ ] Gravity Chip
+	- [ ] Create shader
+	- [ ] Layout
 
 - [ ] Far Future
   - [ ] Level 1 – Stasis Wreck
-    - [ ] Antimatter Vial
-    - [ ] Pod Key
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Antimatter Vial
+	- [ ] Pod Key
+	- [ ] Create shader
+	- [ ] Layout
   - [ ] Level 2 – Orbital Gates
-    - [ ] Star Map Crystal
-    - [ ] Temporal Anchor
-    - [ ] Create shader
-    - [ ] Layout
+	- [ ] Star Map Crystal
+	- [ ] Temporal Anchor
+	- [ ] Create shader
+	- [ ] Layout
 
 ## Scene Management & Transitions
 

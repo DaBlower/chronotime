@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://4whx7djhvdfm"]
+[gd_scene load_steps=12 format=4 uid="uid://4whx7djhvdfm"]
 
 [ext_resource type="Script" uid="uid://0mw5ysritqcf" path="res://scenes/components/levelLoad.gd" id="1_xa7n4"]
 [ext_resource type="TileSet" uid="uid://cgm8co3r8p7nn" path="res://tilesets/dirt.tres" id="2_xa7n4"]
@@ -12,9 +12,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ynx1d"]
 size = Vector2(30, 30)
-
-[sub_resource type="Resource" id="Resource_hrcei"]
-metadata/__load_path__ = "res://scenes/ancient_egypt/level1.tscn"
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bo4dx"]
 
@@ -61,7 +58,6 @@ texture = ExtResource("5_56gwk")
 
 [node name="Next Scene" parent="." instance=ExtResource("6_ve5ok")]
 timePeriod = "prehistoric"
-nextScene = SubResource("Resource_hrcei")
 checkQuotas = true
 
 [node name="ArtifactBar" parent="." instance=ExtResource("8_wvb8j")]

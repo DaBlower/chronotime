@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://bfrjc5d241uo8"]
+[gd_scene load_steps=12 format=4 uid="uid://bfrjc5d241uo8"]
 
 [ext_resource type="Script" uid="uid://bpmcd3n2p3g8n" path="res://scripts/level.gd" id="1_conm7"]
 [ext_resource type="PackedScene" uid="uid://ccndup45bwhh1" path="res://scenes/components/player.tscn" id="2_u3awl"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://dx83dqdx78s8w" path="res://scenes/components/artifact.tscn" id="4_f31uk"]
 [ext_resource type="Texture2D" uid="uid://di86exbj1bj4h" path="res://art/artifacts/obsidian-blade.png" id="5_gnai3"]
 [ext_resource type="PackedScene" uid="uid://twhjf1ocdtsn" path="res://scenes/components/next_scene.tscn" id="6_i8kv5"]
-[ext_resource type="PackedScene" uid="uid://4whx7djhvdfm" path="res://scenes/level2.tscn" id="7_d3jkd"]
 [ext_resource type="PackedScene" uid="uid://c3fpvxjt32ppa" path="res://scenes/components/killzone.tscn" id="8_14jow"]
 [ext_resource type="PackedScene" uid="uid://dl6ayn4mnulq3" path="res://scenes/components/artifactBar.tscn" id="9_mvsps"]
 [ext_resource type="PackedScene" uid="uid://d1h4rjbvfgpfi" path="res://scenes/components/healthBar.tscn" id="10_jvkml"]
@@ -71,7 +70,7 @@ texture = ExtResource("5_gnai3")
 [node name="Next Scene" parent="." instance=ExtResource("6_i8kv5")]
 position = Vector2(1, -62)
 timePeriod = "prehistoric"
-nextScene = ExtResource("7_d3jkd")
+nextScene = "uid://4whx7djhvdfm"
 checkQuotas = true
 
 [node name="Label" type="Label" parent="."]
