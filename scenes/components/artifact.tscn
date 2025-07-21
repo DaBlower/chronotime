@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://rabnse1eqsb6" path="res://scripts/artifact.gd" id="1_0lcuo"]
 
 [node name="artifact" type="Area2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_0lcuo")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
