@@ -99,14 +99,14 @@ Coordinates = Vector2(1084, 935)
 [node name="Next Scene" parent="." instance=ExtResource("9_6uuvf")]
 position = Vector2(924, 1275)
 timePeriod = "industrial_revolution"
-nextScene = "uid://dwpxd1wjbty11"
+nextScene = "uid://lur18rkeelga"
 checkQuotas = true
 
 [node name="Killzone" parent="." instance=ExtResource("10_x008a")]
 position = Vector2(1000, 800)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-position = Vector2(2, 1587)
+position = Vector2(-2339, 1819)
 shape = SubResource("WorldBoundaryShape2D_53g0f")
 
 [node name="ArtifactBar" parent="." instance=ExtResource("11_atr84")]
