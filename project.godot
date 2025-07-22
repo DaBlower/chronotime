@@ -28,6 +28,9 @@ directories/dch_directory={
 "orpheus": "res://dialogue/orpheus.dch"
 }
 directories/dtl_directory={
+"artifacts_collected": "res://dialogue/artifacts_collected.dtl",
+"fallingEgypt": "res://dialogue/fallingEgypt.dtl",
+"not_enough_artifacts": "res://dialogue/not_enough_artifacts.dtl",
 "prehistoric": "res://dialogue/prehistoric.dtl"
 }
 extensions_folder="res://addons/dialogic_additions"
@@ -54,6 +57,7 @@ text/autoskip_time_per_event=1.0
 text/autopauses={}
 layout/style_list=[]
 layout/default_style="Default"
+variables={}
 
 [display]
 

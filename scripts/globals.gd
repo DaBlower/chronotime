@@ -22,9 +22,13 @@ var artifacts_collected := {
 	"far_future": 0
 }
 
+signal collected_artifacts
+
 func add_artifact(time_period: String):
 	if artifacts_collected.has(time_period):
 		artifacts_collected[time_period] += 1
+	if artifacts_collected[time_period] == 3:
+		collected_artifacts.emit()
 
 func print_artifacts(time_period: String): # for debugging
 	if artifacts_collected.has(time_period):

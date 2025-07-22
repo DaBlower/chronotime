@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsi5j5roqi6s"]
+
+[ext_resource type="Texture2D" uid="uid://dhik7ueklisak" path="res://art/flame.png" id="1_ov20u"]
+
+[sub_resource type="Gradient" id="Gradient_my26j"]
+offsets = PackedFloat32Array(0, 0.714286)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_o2tjn"]
+gradient = SubResource("Gradient_my26j")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D"]
+z_index = -1
+texture = ExtResource("1_ov20u")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(3.92188, 3.45499)
+energy = 0.39
+texture = SubResource("GradientTexture2D_o2tjn")

@@ -100,7 +100,7 @@ texture = ExtResource("5_f31uk")
 [node name="Next Scene" parent="." instance=ExtResource("6_gnai3")]
 position = Vector2(1842, 685)
 timePeriod = "prehistoric"
-nextScene = "uid://bfrjc5d241uo8"
+nextScene = "uid://bqhb503qtopyg"
 checkQuotas = true
 
 [node name="Killzone" parent="." instance=ExtResource("8_dxn3v")]

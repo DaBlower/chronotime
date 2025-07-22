@@ -9,12 +9,14 @@ var timePeriod: String
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if checkQuotas:
-		if Globals.check_quotas(timePeriod):
+	if body.name == "Player": # check if the body is the player, otherwise it could be activated accidentally (eg. terrain or other objects)
+		if checkQuotas:
+			if Globals.check_quotas(timePeriod):
+				Health.hide_bars.emit()
+				TransitionController.transition_to(nextScene)
+			else:
+				Dialogic.start("not_enough_artifacts")
+				print("DEBUG: Not enough artifacts! (next_scene.gd)")
+		else:
 			Health.hide_bars.emit()
 			TransitionController.transition_to(nextScene)
-		else:
-			print("DEBUG: Not enough artifacts! (next_scene.gd)")
-	else:
-		Health.hide_bars.emit()
-		TransitionController.transition_to(nextScene)

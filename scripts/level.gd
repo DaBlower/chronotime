@@ -7,6 +7,10 @@ var timePeriod: String
 
 func _ready() -> void:
 	loaded.emit()
+	Globals.connect("collected_artifacts", Callable(self, "_on_artifacts_collected"))
 	$ArtifactBar.updateArtifacts(0)
 	Globals.set_artifacts(timePeriod, 0)
 	$HealthBar.updateHealth()
+
+func _on_artifacts_collected():
+	Dialogic.start("artifacts_collected")
