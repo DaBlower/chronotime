@@ -15,7 +15,7 @@ size = Vector2(30, 30)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_53g0f"]
 
-[node name="Level1" type="Node2D"]
+[node name="AncientEgypt" type="Node2D"]
 scale = Vector2(2, 2)
 script = ExtResource("1_conm7")
 timePeriod = "prehistoric"

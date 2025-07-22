@@ -1,0 +1,119 @@
+[gd_scene load_steps=17 format=4 uid="uid://bqhb503qtopyg"]
+
+[ext_resource type="Script" uid="uid://bpmcd3n2p3g8n" path="res://scripts/level.gd" id="1_vxna6"]
+[ext_resource type="Texture2D" uid="uid://ch6mdx7y2ourn" path="res://art/backgrounds/layer0.png" id="2_k6p8f"]
+[ext_resource type="Texture2D" uid="uid://b0lo3tt481b87" path="res://art/backgrounds/layer1.png" id="3_di7r6"]
+[ext_resource type="Texture2D" uid="uid://dqxu03ao0yfq8" path="res://art/backgrounds/fossils.png" id="4_jeq66"]
+[ext_resource type="PackedScene" uid="uid://ccndup45bwhh1" path="res://scenes/components/player.tscn" id="5_qikrl"]
+[ext_resource type="TileSet" uid="uid://h47jwcwtpf3q" path="res://art/tilesets/terrain.tres" id="6_adwsk"]
+[ext_resource type="PackedScene" uid="uid://dx83dqdx78s8w" path="res://scenes/components/artifact.tscn" id="7_otuf6"]
+[ext_resource type="Texture2D" uid="uid://di86exbj1bj4h" path="res://art/artifacts/obsidian-blade.png" id="8_c2t17"]
+[ext_resource type="PackedScene" uid="uid://twhjf1ocdtsn" path="res://scenes/components/next_scene.tscn" id="9_gngsw"]
+[ext_resource type="PackedScene" uid="uid://c3fpvxjt32ppa" path="res://scenes/components/killzone.tscn" id="10_bkwc5"]
+[ext_resource type="PackedScene" uid="uid://dl6ayn4mnulq3" path="res://scenes/components/artifactBar.tscn" id="11_4omu4"]
+[ext_resource type="PackedScene" uid="uid://d1h4rjbvfgpfi" path="res://scenes/components/healthBar.tscn" id="12_75tp6"]
+[ext_resource type="PackedScene" uid="uid://bjcefbt15ucx5" path="res://scenes/components/dialogueTrigger.tscn" id="13_l8toe"]
+[ext_resource type="Resource" uid="uid://f4amcmwb6eqr" path="res://dialogue/prehistoric.dtl" id="14_1hvwk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53g0f"]
+size = Vector2(30, 30)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_53g0f"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_vxna6")
+timePeriod = "prehistoric"
+
+[node name="Parallax" type="Node2D" parent="."]
+
+[node name="Dirt" type="Parallax2D" parent="Parallax"]
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(1920, 1080)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/Dirt"]
+texture = ExtResource("2_k6p8f")
+centered = false
+
+[node name="Variations" type="Parallax2D" parent="Parallax"]
+scroll_scale = Vector2(0.7, 0.7)
+repeat_size = Vector2(1920, 1080)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/Variations"]
+texture = ExtResource("3_di7r6")
+centered = false
+
+[node name="Fossils" type="Parallax2D" parent="Parallax"]
+scroll_scale = Vector2(0.8, 0.8)
+repeat_size = Vector2(1920, 1080)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/Fossils"]
+texture = ExtResource("4_jeq66")
+centered = false
+
+[node name="Player" parent="." instance=ExtResource("5_qikrl")]
+position = Vector2(850, 800)
+
+[node name="Foreground" type="TileMapLayer" parent="."]
+position = Vector2(1000, 800)
+tile_map_data = PackedByteArray("AAD1/wUAAAAAAAAAAAD3/wUAAAAFAAAAAAD5/wUAAAAFAAAAAAD7/wUAAAAFAAAAAAD9/wUAAAAFAAAAAAD//wUAAAAFAAAAAAABAAUAAAAFAAAAAAADAAUAAAAFAAAAAAAFAAUAAAACAAAAAAD3/wcAAAAAAAQAAAD5/wcAAAAFAAIAAAD7/wcAAAAFAAIAAAD9/wcAAAAFAAIAAAD//wcAAAAFAAIAAAABAAcAAAAFAAIAAAADAAcAAAACAAQAAAANAAIAAAAAAAAAAAAPAAIAAAAFAAAAAAAPAAQAAAAAAAQAAAARAAIAAAAFAAAAAAARAAQAAAAFAAIAAAATAAIAAAAFAAAAAAATAAQAAAAFAAIAAAAVAAIAAAAFAAAAAAAVAAQAAAAFAAIAAAAXAAIAAAAFAAAAAAAXAAQAAAAFAAIAAAAZAAIAAAAFAAAAAAAZAAQAAAAFAAIAAAAbAAIAAAAFAAAAAAAbAAQAAAACAAQAAAAdAAIAAAACAAAAAAD4/wUAAAAFAAAAAAD6/wUAAAAFAAAAAAD8/wUAAAAFAAAAAAD+/wUAAAAFAAAAAAAAAAUAAAAFAAAAAAACAAUAAAAFAAAAAAAaAAIAAAAFAAAAAAAYAAIAAAAFAAAAAAAWAAIAAAAFAAAAAAArAP//AAAAAAQAAAAtAP//AAAFAAIAAAAvAP//AAAFAAIAAAAxAP//AAAFAAIAAAAzAP//AAAFAAIAAAA1AP//AAACAAQAAAApAP3/AAAJAAAAAAArAP3/AAAOAAAAAAAtAP3/AAAOAAAAAAAvAP3/AAAOAAAAAAAxAP3/AAAOAAAAAAAzAP3/AAAOAAAAAAA1AP3/AAAOAAAAAAA3AP3/AAALAAAAAAAmAAgAAAAJAAIAAAAoAAgAAAAOAAIAAAAqAAgAAAAOAAIAAAAsAAgAAAAOAAIAAAAuAAgAAAAOAAIAAAAwAAgAAAAOAAIAAAAyAAgAAAAOAAIAAAA0AAgAAAAOAAIAAAAoAAoAAAAAAAQAAAAqAAoAAAABAAQAAAAsAAoAAAABAAQAAAAuAAoAAAABAAQAAAAwAAoAAAABAAQAAAAyAAoAAAABAAQAAAA0AAoAAAACAAQAAAA2AAgAAAALAAIAAAA=")
+tile_set = ExtResource("6_adwsk")
+
+[node name="artifacts" type="Node2D" parent="."]
+position = Vector2(1000, 800)
+
+[node name="obsidianBlade2" parent="artifacts" instance=ExtResource("7_otuf6")]
+position = Vector2(251, -88)
+timePeriod = "prehistoric"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/obsidianBlade2"]
+position = Vector2(242, 89)
+shape = SubResource("RectangleShape2D_53g0f")
+
+[node name="Sprite2D" type="Sprite2D" parent="artifacts/obsidianBlade2"]
+position = Vector2(241, 88.5)
+texture = ExtResource("8_c2t17")
+
+[node name="obsidianBlade3" parent="artifacts" instance=ExtResource("7_otuf6")]
+position = Vector2(54, 56)
+timePeriod = "prehistoric"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/obsidianBlade3"]
+position = Vector2(6, -8)
+shape = SubResource("RectangleShape2D_53g0f")
+
+[node name="Sprite2D" type="Sprite2D" parent="artifacts/obsidianBlade3"]
+position = Vector2(6, -8)
+texture = ExtResource("8_c2t17")
+
+[node name="obsidianBlade4" parent="artifacts" instance=ExtResource("7_otuf6")]
+position = Vector2(393, -23)
+timePeriod = "prehistoric"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/obsidianBlade4"]
+position = Vector2(0, 7.5)
+shape = SubResource("RectangleShape2D_53g0f")
+
+[node name="Sprite2D" type="Sprite2D" parent="artifacts/obsidianBlade4"]
+position = Vector2(0, 7.5)
+texture = ExtResource("8_c2t17")
+
+[node name="Next Scene" parent="." instance=ExtResource("9_gngsw")]
+position = Vector2(1842, 685)
+timePeriod = "prehistoric"
+nextScene = "uid://bfrjc5d241uo8"
+checkQuotas = true
+
+[node name="Killzone" parent="." instance=ExtResource("10_bkwc5")]
+position = Vector2(1000, 800)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(1000, 800)
+shape = SubResource("WorldBoundaryShape2D_53g0f")
+
+[node name="ArtifactBar" parent="." instance=ExtResource("11_4omu4")]
+
+[node name="HealthBar" parent="." instance=ExtResource("12_75tp6")]
+
+[node name="DialogueTrigger" parent="." instance=ExtResource("13_l8toe")]
+position = Vector2(1000, 800)
+timeline = ExtResource("14_1hvwk")
