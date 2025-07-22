@@ -74,7 +74,7 @@ position = Vector2(1000, 800)
 
 [node name="obsidianBlade2" parent="artifacts" instance=ExtResource("7_otuf6")]
 position = Vector2(251, -88)
-timePeriod = "prehistoric"
+timePeriod = "ancient_egypt"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/obsidianBlade2"]
 position = Vector2(-578.5, 273)
@@ -86,7 +86,7 @@ texture = ExtResource("7_k6p8f")
 
 [node name="obsidianBlade3" parent="artifacts" instance=ExtResource("7_otuf6")]
 position = Vector2(54, 56)
-timePeriod = "prehistoric"
+timePeriod = "ancient_egypt"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/obsidianBlade3"]
 position = Vector2(-380, 33)
@@ -98,7 +98,7 @@ texture = ExtResource("7_k6p8f")
 
 [node name="obsidianBlade4" parent="artifacts" instance=ExtResource("7_otuf6")]
 position = Vector2(393, -23)
-timePeriod = "prehistoric"
+timePeriod = "ancient_egypt"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/obsidianBlade4"]
 position = Vector2(49.5, 4943)
@@ -118,8 +118,8 @@ shape = SubResource("RectangleShape2D_jeq66")
 
 [node name="Next Scene" parent="." instance=ExtResource("9_gngsw")]
 position = Vector2(2450, 476)
-timePeriod = "prehistoric"
-nextScene = "uid://bfrjc5d241uo8"
+timePeriod = "ancient_egypt"
+nextScene = "uid://cf7esqd4iajoh"
 checkQuotas = true
 
 [node name="Killzone" parent="." instance=ExtResource("10_bkwc5")]

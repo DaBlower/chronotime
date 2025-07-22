@@ -4,7 +4,6 @@ extends Area2D
 var timePeriod: String
 
 @export_file("*.tscn") var nextScene: String
-@export var duration: float = 1.0 # the duration of the transition between levels
 @export var checkQuotas: bool
 
 

@@ -1,0 +1,112 @@
+[gd_scene load_steps=14 format=4 uid="uid://cf7esqd4iajoh"]
+
+[ext_resource type="Script" uid="uid://bpmcd3n2p3g8n" path="res://scripts/level.gd" id="1_826w7"]
+[ext_resource type="Texture2D" uid="uid://b48m6jiv4800a" path="res://art/backgrounds/europe.png" id="2_ve5ok"]
+[ext_resource type="Texture2D" uid="uid://clhyusc6q5gu0" path="res://art/backgrounds/castles.png" id="3_56gwk"]
+[ext_resource type="PackedScene" uid="uid://ccndup45bwhh1" path="res://scenes/components/player.tscn" id="4_vcskf"]
+[ext_resource type="TileSet" uid="uid://h47jwcwtpf3q" path="res://art/tilesets/terrain.tres" id="5_wlsvg"]
+[ext_resource type="Texture2D" uid="uid://dudvsp5p3jeqj" path="res://art/artifacts/crown.png" id="6_cleqw"]
+[ext_resource type="PackedScene" uid="uid://dx83dqdx78s8w" path="res://scenes/components/artifact.tscn" id="6_ehnc4"]
+[ext_resource type="PackedScene" uid="uid://twhjf1ocdtsn" path="res://scenes/components/next_scene.tscn" id="9_rjv6p"]
+[ext_resource type="PackedScene" uid="uid://c3fpvxjt32ppa" path="res://scenes/components/killzone.tscn" id="10_ua1li"]
+[ext_resource type="PackedScene" uid="uid://dl6ayn4mnulq3" path="res://scenes/components/artifactBar.tscn" id="11_yivm6"]
+[ext_resource type="PackedScene" uid="uid://d1h4rjbvfgpfi" path="res://scenes/components/healthBar.tscn" id="12_0f064"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53g0f"]
+size = Vector2(30, 30)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_53g0f"]
+
+[node name="MedievalEurope" type="Node2D"]
+position = Vector2(1621, 91)
+script = ExtResource("1_826w7")
+timePeriod = "medieval_europe"
+
+[node name="Parallax" type="Node2D" parent="."]
+
+[node name="Dirt" type="Parallax2D" parent="Parallax"]
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(1920, 1080)
+repeat_times = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/Dirt"]
+position = Vector2(228, 963)
+texture = ExtResource("2_ve5ok")
+centered = false
+
+[node name="Castles" type="Parallax2D" parent="Parallax"]
+scroll_scale = Vector2(0.7, 0.7)
+repeat_size = Vector2(1920, 1080)
+repeat_times = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/Castles"]
+position = Vector2(198, 905)
+texture = ExtResource("3_56gwk")
+centered = false
+
+[node name="Player" parent="." instance=ExtResource("4_vcskf")]
+position = Vector2(-616, 1400)
+
+[node name="Foreground" type="TileMapLayer" parent="."]
+position = Vector2(1000, 800)
+tile_map_data = PackedByteArray("AABb/y8AAAAAAAAAAABc/y8AAAABAAAAAABe/y8AAAABAAAAAABg/y8AAAACAAAAAABm/ysAAAAAAAAAAABo/ysAAAABAAAAAABq/ysAAAABAAAAAABs/ysAAAABAAAAAABu/ysAAAABAAAAAABw/ysAAAACAAAAAAB1/ycAAAAAAAAAAAB7/ycAAAACAAAAAAB3/ycAAAABAAAAAAB5/ycAAAABAAAAAACG/0IAAAAAAAAAAACH/0IAAAABAAAAAACI/0IAAAACAAAAAACS/zsAAAAAAAAAAACT/zsAAAABAAAAAACV/zsAAAABAAAAAACX/zsAAAABAAAAAACZ/zsAAAABAAAAAACb/zsAAAACAAAAAACq/1AAAAAJAAIAAACs/1AAAAAKAAIAAACt/1AAAAALAAIAAACP/ycAAAAAAAAAAACR/ycAAAABAAAAAACS/ycAAAABAAAAAACT/ycAAAABAAAAAACU/ycAAAABAAAAAACV/ycAAAABAAAAAACW/ycAAAABAAAAAACX/ycAAAABAAAAAACY/ycAAAABAAAAAACZ/ycAAAABAAAAAACa/ycAAAABAAAAAACb/ycAAAABAAAAAACc/ycAAAABAAAAAACe/ycAAAACAAAAAACs/yIAAAAAAAAAAACv/yIAAAABAAAAAACu/yIAAAABAAAAAACx/yIAAAABAAAAAACz/yIAAAACAAAAAAC9/yIAAAAAAAAAAAC//yIAAAABAAAAAADB/yIAAAACAAAAAADP/yoAAAAAAAAAAADR/yoAAAABAAAAAADT/yoAAAABAAAAAADW/yoAAAABAAAAAADV/yoAAAABAAAAAADY/yoAAAACAAAAAADt/1YAAAAJAAAAAADu/1YAAAAKAAAAAADv/1YAAAAKAAAAAADx/1YAAAAKAAAAAADz/1YAAAAKAAAAAAD2/1YAAAAKAAAAAAD1/1YAAAAKAAAAAAD4/1YAAAAKAAAAAAD6/1YAAAALAAAAAAAOAEoAAAAJAAAAAAAQAEoAAAAKAAAAAAASAEoAAAAKAAAAAAAUAEoAAAAKAAAAAAAWAEoAAAALAAAAAAAfAEcAAAAJAAAAAAAhAEcAAAAKAAAAAAAjAEcAAAAKAAAAAAAlAEcAAAALAAAAAAAvAD8AAAAJAAAAAAAxAD8AAAAKAAAAAAAzAD8AAAALAAAAAAD1/yIAAAAAAAAAAAD3/yIAAAABAAAAAAD5/yIAAAABAAAAAAD7/yIAAAABAAAAAAD+/yIAAAABAAAAAAD9/yIAAAABAAAAAAAAACIAAAABAAAAAAACACIAAAACAAAAAABAADQAAAAJAAAAAABCADQAAAAKAAAAAABFADQAAAAKAAAAAABEADQAAAAKAAAAAABHADQAAAALAAAAAAA4ACYAAAAJAAAAAAA6ACYAAAAKAAAAAAA8ACYAAAAKAAAAAAA+ACYAAAALAAAAAAArAB0AAAAJAAAAAAAtAB0AAAAKAAAAAAAvAB0AAAALAAAAAAAVABIAAAAJAAAAAAAXABIAAAAKAAAAAAAZABIAAAAKAAAAAAAbABIAAAAKAAAAAAAdABIAAAALAAAAAAA=")
+tile_set = ExtResource("5_wlsvg")
+
+[node name="artifacts" type="Node2D" parent="."]
+position = Vector2(1000, 800)
+
+[node name="obsidianBlade2" parent="artifacts" instance=ExtResource("6_ehnc4")]
+position = Vector2(251, -88)
+timePeriod = "medieval_europe"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/obsidianBlade2"]
+position = Vector2(-1206.5, 337)
+shape = SubResource("RectangleShape2D_53g0f")
+
+[node name="Sprite2D" type="Sprite2D" parent="artifacts/obsidianBlade2"]
+position = Vector2(-1206.5, 341)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("6_cleqw")
+
+[node name="obsidianBlade3" parent="artifacts" instance=ExtResource("6_ehnc4")]
+position = Vector2(54, 56)
+timePeriod = "medieval_europe"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/obsidianBlade3"]
+position = Vector2(-699, 593)
+shape = SubResource("RectangleShape2D_53g0f")
+
+[node name="Sprite2D" type="Sprite2D" parent="artifacts/obsidianBlade3"]
+position = Vector2(-699, 596)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("6_cleqw")
+
+[node name="obsidianBlade4" parent="artifacts" instance=ExtResource("6_ehnc4")]
+position = Vector2(393, -23)
+timePeriod = "medieval_europe"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/obsidianBlade4"]
+position = Vector2(-292.5, 680.5)
+shape = SubResource("RectangleShape2D_53g0f")
+
+[node name="Sprite2D" type="Sprite2D" parent="artifacts/obsidianBlade4"]
+position = Vector2(-292.5, 684)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("6_cleqw")
+
+[node name="Next Scene" parent="." instance=ExtResource("9_rjv6p")]
+position = Vector2(933, 1274)
+timePeriod = "medieval_europe"
+nextScene = "uid://dso0oxn2pvwhh"
+checkQuotas = true
+
+[node name="Killzone" parent="." instance=ExtResource("10_ua1li")]
+position = Vector2(1000, 800)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(2, 1587)
+shape = SubResource("WorldBoundaryShape2D_53g0f")
+
+[node name="ArtifactBar" parent="." instance=ExtResource("11_yivm6")]
+
+[node name="HealthBar" parent="." instance=ExtResource("12_0f064")]

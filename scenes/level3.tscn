@@ -1,0 +1,116 @@
+[gd_scene load_steps=15 format=4 uid="uid://dso0oxn2pvwhh"]
+
+[ext_resource type="Script" uid="uid://bpmcd3n2p3g8n" path="res://scripts/level.gd" id="1_qewby"]
+[ext_resource type="Texture2D" uid="uid://cmgf3nyhl62ur" path="res://art/backgrounds/industrial.png" id="2_qewby"]
+[ext_resource type="Texture2D" uid="uid://drnqciv4upvga" path="res://art/backgrounds/gears.png" id="3_bradm"]
+[ext_resource type="PackedScene" uid="uid://ccndup45bwhh1" path="res://scenes/components/player.tscn" id="4_e40mx"]
+[ext_resource type="TileSet" uid="uid://h47jwcwtpf3q" path="res://art/tilesets/terrain.tres" id="5_a114e"]
+[ext_resource type="PackedScene" uid="uid://dx83dqdx78s8w" path="res://scenes/components/artifact.tscn" id="6_y1e0c"]
+[ext_resource type="Texture2D" uid="uid://clf7am0wt21o4" path="res://art/artifacts/gear.png" id="7_bradm"]
+[ext_resource type="Script" uid="uid://ipo02kim6iju" path="res://scenes/teleport.gd" id="8_07lh1"]
+[ext_resource type="PackedScene" uid="uid://twhjf1ocdtsn" path="res://scenes/components/next_scene.tscn" id="9_6uuvf"]
+[ext_resource type="PackedScene" uid="uid://c3fpvxjt32ppa" path="res://scenes/components/killzone.tscn" id="10_x008a"]
+[ext_resource type="PackedScene" uid="uid://dl6ayn4mnulq3" path="res://scenes/components/artifactBar.tscn" id="11_atr84"]
+[ext_resource type="PackedScene" uid="uid://d1h4rjbvfgpfi" path="res://scenes/components/healthBar.tscn" id="12_qyu38"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53g0f"]
+size = Vector2(30, 30)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_53g0f"]
+
+[node name="IndustrialRevolution" type="Node2D"]
+position = Vector2(1621, 91)
+script = ExtResource("1_qewby")
+timePeriod = "industrial_revolution"
+
+[node name="Parallax" type="Node2D" parent="."]
+
+[node name="Dirt" type="Parallax2D" parent="Parallax"]
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(1920, 1080)
+repeat_times = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/Dirt"]
+position = Vector2(228, 963)
+texture = ExtResource("2_qewby")
+centered = false
+
+[node name="Castles" type="Parallax2D" parent="Parallax"]
+scroll_scale = Vector2(0.7, 0.7)
+repeat_size = Vector2(1920, 1080)
+repeat_times = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/Castles"]
+position = Vector2(198, 905)
+texture = ExtResource("3_bradm")
+centered = false
+
+[node name="Player" parent="." instance=ExtResource("4_e40mx")]
+position = Vector2(-1327, 1544)
+
+[node name="Foreground" type="TileMapLayer" parent="."]
+position = Vector2(1000, 800)
+tile_map_data = PackedByteArray("AABt/zAAAAAAAAAAAABv/zAAAAABAAAAAABw/zAAAAABAAAAAABx/zAAAAABAAAAAABy/zAAAAABAAAAAABz/zAAAAABAAAAAAB0/zAAAAABAAAAAAB1/zAAAAABAAAAAAB2/zAAAAABAAAAAAB3/zAAAAABAAAAAAB4/zAAAAABAAAAAAB6/zAAAAACAAAAAACG/z8AAAAJAAIAAACI/z8AAAAKAAIAAACJ/z8AAAAKAAIAAACK/z8AAAAKAAIAAACL/z8AAAAKAAIAAACM/z8AAAAKAAIAAACO/z8AAAALAAIAAACL/ygAAAAAAAAAAACN/ygAAAABAAAAAACO/ygAAAABAAAAAACP/ygAAAABAAAAAACQ/ygAAAABAAAAAACR/ygAAAABAAAAAACT/ygAAAACAAAAAACp/yIAAAAAAAAAAACr/yIAAAABAAAAAACs/yIAAAABAAAAAACu/yIAAAABAAAAAACw/yIAAAABAAAAAACx/yIAAAABAAAAAACy/yIAAAABAAAAAACz/yIAAAABAAAAAAC0/yIAAAABAAAAAAC1/yIAAAABAAAAAAC2/yIAAAABAAAAAAC3/yIAAAABAAAAAAC5/yIAAAACAAAAAACu/yoAAAAAAAAAAACw/yoAAAABAAAAAACy/yoAAAABAAAAAAC0/yoAAAACAAAAAACG/08AAAAJAAIAAACI/08AAAAKAAIAAACK/08AAAALAAIAAAB2/10AAAAJAAIAAAB4/10AAAALAAIAAABs/2gAAAAJAAIAAABu/2gAAAALAAIAAADG/0kAAAAJAAIAAADI/0kAAAAKAAIAAADJ/0kAAAAKAAIAAADK/0kAAAAKAAIAAADL/0kAAAAKAAIAAADM/0kAAAAKAAIAAADN/0kAAAAKAAIAAADO/0kAAAAKAAIAAADP/0kAAAAKAAIAAADQ/0kAAAAKAAIAAADR/0kAAAAKAAIAAADS/0kAAAAKAAIAAADT/0kAAAAKAAIAAADU/0kAAAAKAAIAAADV/0kAAAAKAAIAAADW/0kAAAAKAAIAAADX/0kAAAAKAAIAAADY/0kAAAAKAAIAAADZ/0kAAAAKAAIAAADa/0kAAAAKAAIAAADc/0kAAAALAAIAAADv/z8AAAAJAAIAAADx/z8AAAAKAAIAAADz/z8AAAAKAAIAAAD1/z8AAAAKAAIAAAD3/z8AAAAKAAIAAAD5/z8AAAAKAAIAAAD7/z8AAAALAAIAAADe/zEAAAAJAAIAAADg/zEAAAAKAAIAAADi/zEAAAAKAAIAAADj/zEAAAAKAAIAAADk/zEAAAAKAAIAAADl/zEAAAAKAAIAAADm/zEAAAAKAAIAAADo/zEAAAALAAIAAADI/ygAAAAJAAIAAADK/ygAAAAKAAIAAADL/ygAAAAKAAIAAADM/ykAAAAKAAIAAADN/ykAAAALAAIAAADO/yoAAAAJAAIAAADP/yoAAAALAAIAAADQ/ysAAAAJAAIAAADR/ysAAAAKAAIAAADL/ykAAAAJAAIAAADT/ysAAAAKAAIAAADV/ysAAAALAAIAAACy/1gAAAAJAAIAAAC0/1gAAAALAAIAAAD4/yIAAAAAAAAAAAD6/yIAAAABAAAAAAD8/yIAAAABAAAAAAD+/yIAAAACAAAAAAA=")
+tile_set = ExtResource("5_a114e")
+
+[node name="artifacts" type="Node2D" parent="."]
+position = Vector2(1000, 800)
+
+[node name="obsidianBlade2" parent="artifacts" instance=ExtResource("6_y1e0c")]
+position = Vector2(251, -88)
+timePeriod = "industrial_revolution"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/obsidianBlade2"]
+position = Vector2(-754.5, 361)
+shape = SubResource("RectangleShape2D_53g0f")
+
+[node name="Sprite2D" type="Sprite2D" parent="artifacts/obsidianBlade2"]
+position = Vector2(-754.5, 359.5)
+texture = ExtResource("7_bradm")
+
+[node name="obsidianBlade3" parent="artifacts" instance=ExtResource("6_y1e0c")]
+position = Vector2(54, 56)
+timePeriod = "industrial_revolution"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/obsidianBlade3"]
+position = Vector2(-1236, 801.5)
+shape = SubResource("RectangleShape2D_53g0f")
+
+[node name="Sprite2D" type="Sprite2D" parent="artifacts/obsidianBlade3"]
+position = Vector2(-1236, 801)
+texture = ExtResource("7_bradm")
+
+[node name="obsidianBlade4" parent="artifacts" instance=ExtResource("6_y1e0c")]
+position = Vector2(393, -23)
+timePeriod = "industrial_revolution"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/obsidianBlade4"]
+position = Vector2(-809, 694.5)
+shape = SubResource("RectangleShape2D_53g0f")
+
+[node name="Sprite2D" type="Sprite2D" parent="artifacts/obsidianBlade4"]
+position = Vector2(-808.5, 694.5)
+texture = ExtResource("7_bradm")
+
+[node name="teleport" type="Area2D" parent="artifacts"]
+script = ExtResource("8_07lh1")
+Coordinates = Vector2(1084, 935)
+
+[node name="Next Scene" parent="." instance=ExtResource("9_6uuvf")]
+position = Vector2(924, 1275)
+timePeriod = "industrial_revolution"
+nextScene = "uid://dwpxd1wjbty11"
+checkQuotas = true
+
+[node name="Killzone" parent="." instance=ExtResource("10_x008a")]
+position = Vector2(1000, 800)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(2, 1587)
+shape = SubResource("WorldBoundaryShape2D_53g0f")
+
+[node name="ArtifactBar" parent="." instance=ExtResource("11_atr84")]
+
+[node name="HealthBar" parent="." instance=ExtResource("12_qyu38")]
+
+[connection signal="body_entered" from="artifacts/teleport" to="artifacts/teleport" method="_on_body_entered"]
