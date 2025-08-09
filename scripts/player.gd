@@ -22,6 +22,7 @@ var onground = true
 
 
 func _ready() -> void:
+	velocity = Vector2.ZERO
 	Globals.respawn = self.position
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Engine.time_scale = 1.0

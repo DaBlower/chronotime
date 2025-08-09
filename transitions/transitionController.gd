@@ -18,6 +18,7 @@ func transition_out():
 	animation_player.play("fade_out")
 	
 func transition_to(scene: String):
+	Dialogic.clear()
 	transition_in()
 	await transitioned_in # Wait for fade-in to complete before removing current scene
 	
