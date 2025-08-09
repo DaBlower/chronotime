@@ -1,9 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://dx83dqdx78s8w"]
+[gd_scene load_steps=3 format=3 uid="uid://dx83dqdx78s8w"]
 
 [ext_resource type="Script" uid="uid://rabnse1eqsb6" path="res://scripts/artifact.gd" id="1_0lcuo"]
+[ext_resource type="AudioStream" uid="uid://dxn7d5hn5e7i1" path="res://music/yay.mp3" id="2_4b02n"]
 
 [node name="artifact" type="Area2D"]
 scale = Vector2(2, 2)
 script = ExtResource("1_0lcuo")
+timePeriod = null
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_4b02n")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

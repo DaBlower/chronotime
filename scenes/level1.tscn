@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://bqhb503qtopyg"]
+[gd_scene load_steps=24 format=4 uid="uid://bqhb503qtopyg"]
 
 [ext_resource type="Script" uid="uid://bpmcd3n2p3g8n" path="res://scripts/level.gd" id="1_vxna6"]
 [ext_resource type="Texture2D" uid="uid://biiftyyr4op0" path="res://art/backgrounds/egypt.png" id="2_vxna6"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://d1h4rjbvfgpfi" path="res://scenes/components/healthBar.tscn" id="12_75tp6"]
 [ext_resource type="PackedScene" uid="uid://bjcefbt15ucx5" path="res://scenes/components/dialogueTrigger.tscn" id="13_l8toe"]
 [ext_resource type="Resource" uid="uid://c5eupiqyyueij" path="res://dialogue/fallingEgypt.dtl" id="14_k6p8f"]
+[ext_resource type="Resource" uid="uid://djsqkm7hr2ugm" path="res://dialogue/egypt.dtl" id="15_dxn3v"]
 [ext_resource type="PackedScene" uid="uid://dsi5j5roqi6s" path="res://scenes/components/torch.tscn" id="15_k6p8f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_53g0f"]
@@ -144,6 +145,10 @@ shape = SubResource("RectangleShape2D_di7r6")
 [node name="DialogueTrigger" parent="." instance=ExtResource("13_l8toe")]
 position = Vector2(994, 1144)
 timeline = ExtResource("14_k6p8f")
+
+[node name="DialogueTrigger2" parent="." instance=ExtResource("13_l8toe")]
+position = Vector2(845, 881)
+timeline = ExtResource("15_dxn3v")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(912.5, 7600)

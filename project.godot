@@ -29,6 +29,8 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "artifacts_collected": "res://dialogue/artifacts_collected.dtl",
+"egypt": "res://dialogue/egypt.dtl",
+"europe": "res://dialogue/europe.dtl",
 "fallingEgypt": "res://dialogue/fallingEgypt.dtl",
 "not_enough_artifacts": "res://dialogue/not_enough_artifacts.dtl",
 "prehistoric": "res://dialogue/prehistoric.dtl"
