@@ -24,14 +24,16 @@ func transition_to(scene: String):
 	var new_scene = load(scene).instantiate()
 	var root: Window = get_tree().get_root()
 	
-	# remove current scene
-	root.get_child(root.get_child_count() - 1).free() # the transition controller will be loaded as the first node and the actual scene will be the second last
+	# remove current scene **reliably** bc the old logic deleted the dialogic scene instead of the current scene for some reason
+	if get_tree().current_scene:
+		get_tree().current_scene.free()
 	
 	root.add_child(new_scene) # add new scene
 	
 	await get_tree().create_timer(0.5).timeout # wait a bit for everything to load
 	
 	transition_out()
+	get_tree().current_scene = new_scene
 	await transitioned_out
 	
 
