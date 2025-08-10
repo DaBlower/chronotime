@@ -1,6 +1,6 @@
 extends Node
 
-const effects = {"collect": "res://music/yay.ogg"}
+const effects = {"collect": "res://music/yay.ogg", "die": "res://music/die.mp3", "click": "res://music/click.mp3"}
 
 func play_sfx(effect: String) -> void:
 	if effect in effects:

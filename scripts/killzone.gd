@@ -7,6 +7,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		Health.subtract_health(1)
 		health_bar.updateHealth()
+		Sfx.play_sfx("die")
 		#Engine.time_scale = 0.25 # slow down the game to 1/4 speed
 		body.kill(false)
 		#slowdown_time.start()

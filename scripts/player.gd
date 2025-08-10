@@ -100,6 +100,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 func kill(resetScene: bool):
+	velocity = Vector2.ZERO
 	if resetScene:
 		get_tree().reload_current_scene()
 	else:
@@ -118,6 +119,7 @@ func stop_input(time):
 	can_input = true
 
 func teleport(coordinates: Vector2):
+	velocity = Vector2.ZERO
 	position = coordinates
 	
 func _on_dialogic_signal(argument: String):
