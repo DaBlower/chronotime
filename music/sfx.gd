@@ -1,6 +1,14 @@
-extends AudioStreamPlayer2D
+extends Node
 
+const effects = {"collect": "res://music/yay.ogg"}
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	play()
+func play_sfx(effect: String) -> void:
+	if effect in effects:
+		var player = AudioStreamPlayer.new()
+		player.stream = load(effects[effect])
+		add_child(player)
+		player.play()
+		player.connect("finished", Callable(player, "queue_free"))
+		print("played sfx")
+	else:
+		print("Sound effect doesn't exist!")

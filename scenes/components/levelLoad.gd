@@ -7,8 +7,9 @@ extends Node2D
 @export_enum("prehistoric", "ancient_egypt", "ancient_greece", "imperial_china", "medieval_europe", "renaissance", "industrial_revolution", "prohibition", "world_wars", "modern_day", "near_future", "far_future")
 var timePeriod: String
 
+var effects = {"collect": "res://music/yay.mp3"}
+
 func  _ready() -> void:
 	artifact_bar.updateArtifacts(0)
 	health_bar.updateHealth()
 	Globals.set_artifacts(timePeriod, 0)
-	

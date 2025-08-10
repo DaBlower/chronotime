@@ -21,3 +21,4 @@ func updateHealth() -> void:
 	
 func _on_hide_bars():
 	self.visible = false
+	Dialogic.clear()

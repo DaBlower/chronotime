@@ -9,12 +9,8 @@ var timePeriod: String
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		print("DEBUG: you collected an artifact!")
-		
-		var sfx_scene = load("res://music/sfx.tscn" )
-		var sfx_instance = sfx_scene.instantiate()
-		sfx_instance.global_position = global_position
-		get_tree().current_scene.add_child(sfx_instance)
-		
 		Globals.add_artifact(timePeriod)
 		Globals.print_artifacts(timePeriod)
+		artifact_bar.updateArtifacts(Globals.return_artifacts(timePeriod))
+		Sfx.play_sfx("collect")
 		queue_free()

@@ -21,6 +21,7 @@ Globals="*res://scripts/globals.gd"
 Health="*res://scripts/health.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 TransitionController="*res://transitions/transitionController.tscn"
+Sfx="*res://music/sfx.gd"
 
 [dialogic]
 

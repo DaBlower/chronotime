@@ -21,4 +21,5 @@ func check_health():
 	if health < 1:
 		health = 3
 		hide_bars.emit()
+		Dialogic.clear()
 		TransitionController.transition_to(end_screen)
