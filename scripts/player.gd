@@ -20,12 +20,15 @@ var canDash = true
 
 var onground = true
 
+var just_loaded: bool
 
 func _ready() -> void:
 	velocity = Vector2.ZERO
 	Globals.respawn = self.position
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Engine.time_scale = 1.0
+	just_loaded = true
+	
 	
 func _physics_process(delta: float) -> void:
 	if is_on_floor() and not onground and slammed:
@@ -89,14 +92,13 @@ func _physics_process(delta: float) -> void:
 		$sprite.scale.y = 0.8
 		
 	if Input.is_action_just_pressed("dash") and canDash and can_input:
-		#$whoosh.play()
 		dashing = true
 		canDash = false
 		$dashTimer.start()
 		$dashCooldown.start()
-		#$particles.process_material.direction = Vector3(dir*1,0,0)
-		#$particles.emitting = true
-		#$particles.emitting = false
+	if just_loaded:
+		velocity = Vector2.ZERO
+		just_loaded = false
 	move_and_slide()
 	
 func kill(resetScene: bool):
